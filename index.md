@@ -21,6 +21,13 @@ Syntax highlighted code block
 1. Numbered
 2. List
 
+<html>
+  
+  
+  <h1> Hi </h1>
+  
+  </html>
+
 **Bold** and _Italic_ and `Code` text
 
 [Link](url) and ![Image](src)
