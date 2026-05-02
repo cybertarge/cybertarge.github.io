@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily News Briefing - 2026-05-02 11:20:18</title>
-    <style>
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily News Briefing - 2026-05-02 14:17:53</title><style>
         :root { --primary-color: #2c3e50; --accent-color: #3498db; --bg-color: #f4f6f7; --card-bg: #ffffff; --up-color: #27ae60; --down-color: #e74c3c; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; background-color: var(--bg-color); color: #333; font-size: 18px; }
         .container { max-width: 1200px; margin: 0 auto; }
         h1 { text-align: center; color: var(--primary-color); border-bottom: 3px solid var(--accent-color); padding-bottom: 15px; margin-bottom: 30px; font-size: 2.2em; }
         .timestamp { text-align: center; color: #7f8c8d; margin-top: -20px; margin-bottom: 30px; font-size: 0.9em; }
-        
         .market-strip { display: flex; flex-wrap: wrap; justify-content: center; background: #fff; padding: 15px; border-radius: 8px; margin-bottom: 40px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); gap: 20px; border-top: 5px solid var(--accent-color); }
         .market-item { display: flex; align-items: center; font-size: 0.95em; padding: 8px 15px; border-right: 1px solid #eee; }
         .market-item:last-child { border-right: none; }
@@ -20,457 +15,152 @@
         .up { color: var(--up-color); }
         .down { color: var(--down-color); }
         .spark-img { vertical-align: middle; margin-left: 10px; width: 80px; height: 20px; }
-        
         .ai-summary-box { background: #eef2f7; border-left: 12px solid var(--accent-color); padding: 25px; border-radius: 10px; margin-bottom: 40px; box-shadow: 0 4px 8px rgba(0,0,0,0.08); }
         .ai-summary-box h2 { margin-top: 0; color: var(--primary-color); font-size: 1.6em; display: flex; align-items: center; }
         .ai-summary-box h2::before { content: "🤖"; margin-right: 12px; }
         .ai-summary-box ul { margin-bottom: 0; font-size: 1.05em; }
-        
         .category-section { margin-bottom: 60px; }
         .category-title { font-size: 2em; color: var(--primary-color); margin-bottom: 25px; border-left: 6px solid var(--accent-color); padding-left: 18px; background: #e8e8e8; padding: 12px 18px; border-radius: 0 8px 8px 0; font-weight: bold; }
-        
         .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; }
         .source-column { background: var(--card-bg); padding: 25px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
         .source-name { font-size: 1.4em; font-weight: bold; color: var(--accent-color); margin-top: 0; border-bottom: 2px solid #f0f0f0; padding-bottom: 12px; margin-bottom: 18px; }
-        
         ul { list-style: none; padding: 0; margin: 0; }
         li { margin-bottom: 20px; border-bottom: 1px solid #f4f4f4; padding-bottom: 20px; }
         li:last-child { border-bottom: none; }
-        
         a { text-decoration: none; color: #2c3e50; font-weight: bold; display: block; margin-bottom: 8px; font-size: 1.1em; }
         a:hover { color: var(--accent-color); }
         .meta { font-size: 0.85em; color: #95a5a6; display: block; font-weight: 500; }
-        
         .footer { text-align: center; margin-top: 60px; padding-top: 30px; border-top: 2px solid #eee; color: #7f8c8d; font-size: 0.9em; }
-        
         @media (max-width: 768px) { 
             body { font-size: 16px; padding: 10px; }
             .news-grid { grid-template-columns: 1fr; } 
             .market-strip { flex-direction: column; align-items: flex-start; gap: 10px; } 
             .market-item { border-right: none; border-bottom: 1px solid #eee; width: 100%; padding: 10px 0; } 
         }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div style="text-align: right; margin-bottom: 10px;">
-            <a href="https://cybertarge.github.io/daily_news.html" style="display: inline-block; background: #3498db; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.9em;">🌐 View Online Version</a>
-        </div>
-        <h1>Cybertarge (tm) Daily News Briefing</h1>
-        <p class="timestamp">Generated on: 2026-05-02 11:20:18</p>
-        <div class="market-strip">
-            <div class="market-item">
-                <span class="market-name">New York:</span>
-                <span class="market-price">7,230.12</span>
-                <span class="market-change up">+0.29%</span>
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMzAiPjxwb2x5bGluZSBmaWxsPSJub25lIiBzdHJva2U9IiMyN2FlNjAiIHN0cm9rZS13aWR0aD0iMiIgcG9pbnRzPSIwLjAsMTguNzkzNTcwNTI1NTU1MyA3LjE0Mjg1NzE0Mjg1NzE0MiwxOC43OTM1NzA1MjU1NTUzIDE0LjI4NTcxNDI4NTcxNDI4NSwxOC43OTM1NzA1MjU1NTUzIDIxLjQyODU3MTQyODU3MTQyNywyMS44NDkzNzY5MTg5MDkxMjIgMjguNTcxNDI4NTcxNDI4NTcsMzAuMCAzNS43MTQyODU3MTQyODU3MTUsMTYuNjU1MjI4NDYzMDY2NzIgNDIuODU3MTQyODU3MTQyODU0LDIxLjk4MzAyMzI5NzgxNDc5IDUwLjAsMTEuNzQ2NDMzMDg2NTA4OTU4IDU3LjE0Mjg1NzE0Mjg1NzE0LDExLjc0NjQzMzA4NjUwODk1OCA2NC4yODU3MTQyODU3MTQyOSwxMS43NDY0MzMwODY1MDg5NTggNzEuNDI4NTcxNDI4NTcxNDMsMTAuMTUxNzA2NzAwMzc5MjkzIDc4LjU3MTQyODU3MTQyODU3LDE2LjQ5MjY4NTU2OTgwMzEyMiA4NS43MTQyODU3MTQyODU3MSwxNy4wMDc0MDQ3MzE4MDQyNyA5Mi44NTcxNDI4NTcxNDI4NiwzLjgxMjUzMzg2MzEwMjcxMTMgMTAwLjAsMC4wIiAvPjwvc3ZnPg==" class="spark-img" alt="trend" />
-            </div>
-            <div class="market-item">
-                <span class="market-name">London:</span>
-                <span class="market-price">10,363.93</span>
-                <span class="market-change down">-0.14%</span>
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMzAiPjxwb2x5bGluZSBmaWxsPSJub25lIiBzdHJva2U9IiNlNzRjM2MiIHN0cm9rZS13aWR0aD0iMiIgcG9pbnRzPSIwLjAsMC4wIDcuMTQyODU3MTQyODU3MTQyLDAuMCAxNC4yODU3MTQyODU3MTQyODUsMC4wIDIxLjQyODU3MTQyODU3MTQyNywzLjg2NDUxNjQxMjkxOTA4NzQgMjguNTcxNDI4NTcxNDI4NTcsMTEuMTkwMjY2NjU0OTMyNjUgMzUuNzE0Mjg1NzE0Mjg1NzE1LDEyLjYxNzkyNjYwMzg4OTg2IDQyLjg1NzE0Mjg1NzE0Mjg1NCwxMy45MDE2OTg0OTUxMTU3MDMgNTAuMCwxOS4wNDUzNjY1NDA1MjYyOCA1Ny4xNDI4NTcxNDI4NTcxNCwxOS4wNDUzNjY1NDA1MjYyOCA2NC4yODU3MTQyODU3MTQyOSwxOS4wNDUzNjY1NDA1MjYyOCA3MS40Mjg1NzE0Mjg1NzE0MywyMi44NzI5MjA4ODM1Njk0ODUgNzguNTcxNDI4NTcxNDI4NTcsMjIuMTAwNjc3NjM3OTQ3NjgzIDg1LjcxNDI4NTcxNDI4NTcxLDMwLjAgOTIuODU3MTQyODU3MTQyODYsMTkuMDYyNTI3NTAxNTQwMTEgMTAwLjAsMjAuMDQ1MzIyNTM4MDYyMTIzIiAvPjwvc3ZnPg==" class="spark-img" alt="trend" />
-            </div>
-            <div class="market-item">
-                <span class="market-name">Delhi:</span>
-                <span class="market-price">23,997.55</span>
-                <span class="market-change down">-0.74%</span>
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMzAiPjxwb2x5bGluZSBmaWxsPSJub25lIiBzdHJva2U9IiNlNzRjM2MiIHN0cm9rZS13aWR0aD0iMiIgcG9pbnRzPSIwLjAsOS44NjAwMTYyMDg2NDk1MjYgNy4xNDI4NTcxNDI4NTcxNDIsOS44NjAwMTYyMDg2NDk1MjYgMTQuMjg1NzE0Mjg1NzE0Mjg1LDkuODYwMDE2MjA4NjQ5NTI2IDIxLjQyODU3MTQyODU3MTQyNyw5LjM2MDQ5NTEwMDU2NzMzIDI4LjU3MTQyODU3MTQyODU3LDAuMCAzNS43MTQyODU3MTQyODU3MTUsOC43NzQ3NzM0NDcyODUwNzggNDIuODU3MTQyODU3MTQyODU0LDE3LjgzOTA5MjMxNTYyNjYzNyA1MC4wLDMwLjAgNTcuMTQyODU3MTQyODU3MTQsMzAuMCA2NC4yODU3MTQyODU3MTQyOSwzMC4wIDcxLjQyODU3MTQyODU3MTQzLDIxLjM5MDk5NjgzMTk0NTc1IDc4LjU3MTQyODU3MTQyODU3LDI1LjY3ODkyMTM4ODA0OTc5IDg1LjcxNDI4NTcxNDI4NTcxLDE3LjYzNTc0NzQzOTc3MDA2IDkyLjg1NzE0Mjg1NzE0Mjg2LDI1LjU5NzE0MTM4MzYyOTMxNCAxMDAuMCwyNS41OTcxNDEzODM2MjkzMTQiIC8+PC9zdmc+" class="spark-img" alt="trend" />
-            </div>
-            <div class="market-item">
-                <span class="market-name">Dubai:</span>
-                <span class="market-price">5,766.85</span>
-                <span class="market-change up">+0.01%</span>
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMzAiPjxwb2x5bGluZSBmaWxsPSJub25lIiBzdHJva2U9IiNlNzRjM2MiIHN0cm9rZS13aWR0aD0iMiIgcG9pbnRzPSIwLjAsMC4wIDcuMTQyODU3MTQyODU3MTQyLDAuMCAxNC4yODU3MTQyODU3MTQyODUsMC4wIDIxLjQyODU3MTQyODU3MTQyNywxNi45ODE5NzU4Nzc0OTAyMzUgMjguNTcxNDI4NTcxNDI4NTcsMTQuNzkwNjIyMDM1NTA2MjE3IDM1LjcxNDI4NTcxNDI4NTcxNSwyMy4yMjY3MjQ0ODg0MTMxMiA0Mi44NTcxNDI4NTcxNDI4NTQsMjMuNDk2NDA4NzI3NDY5ODczIDUwLjAsMTguMDU1MjkyMDQ0OTkyNjIgNTcuMTQyODU3MTQyODU3MTQsMTguMDU1MjkyMDQ0OTkyNjIgNjQuMjg1NzE0Mjg1NzE0MjksMTguMDU1MjkyMDQ0OTkyNjIgNzEuNDI4NTcxNDI4NTcxNDMsMTUuODI4NzAzMDc2Mjk3NjM0IDc4LjU3MTQyODU3MTQyODU3LDE3LjU2MjAwMDI3MTAzOTQ2NiA4NS43MTQyODU3MTQyODU3MSwxNy4wOTE3NDY4NDkxNjY1NDcgOTIuODU3MTQyODU3MTQyODYsMzAuMCAxMDAuMCwyOS44OTE1ODQyMjU1MDQ3ODYiIC8+PC9zdmc+" class="spark-img" alt="trend" />
-            </div>
-            <div class="market-item">
-                <span class="market-name">Gold:</span>
-                <span class="market-price">4,644.5</span>
-                <span class="market-change up">+0.32%</span>
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMzAiPjxwb2x5bGluZSBmaWxsPSJub25lIiBzdHJva2U9IiNlNzRjM2MiIHN0cm9rZS13aWR0aD0iMiIgcG9pbnRzPSIwLjAsMy4wNzY0MDA2NzkxMTcyMjQzIDcuMTQyODU3MTQyODU3MTQyLDAuMCAxNC4yODU3MTQyODU3MTQyODUsOS43ODk0NzM2ODQyMTA1NjMgMjEuNDI4NTcxNDI4NTcxNDI3LDMuNTQ0OTkxNTExMDM1NjcyIDI4LjU3MTQyODU3MTQyODU3LDExLjk0OTA2NjIxMzkyMTkyIDM1LjcxNDI4NTcxNDI4NTcxNSwxMS41NjE5Njk0Mzk3MjgzNTEgNDIuODU3MTQyODU3MTQyODU0LDE2Ljc4Nzc3NTg5MTM0MTI3NiA1MC4wLDE1LjcwNzk3OTYyNjQ4NTY0NCA1Ny4xNDI4NTcxNDI4NTcxNCwxNC4xMjkwMzIyNTgwNjQ1ODkgNjQuMjg1NzE0Mjg1NzE0MjksMTguNTE5NTI0NjE3OTk2NjIzIDcxLjQyODU3MTQyODU3MTQzLDE3LjM4ODc5NDU2NzA2Mjg5IDc4LjU3MTQyODU3MTQyODU3LDI3LjI0OTU3NTU1MTc4MjY4NCA4NS43MTQyODU3MTQyODU3MSwzMC4wIDkyLjg1NzE0Mjg1NzE0Mjg2LDI1LjA0OTIzNTk5MzIwODg4IDEwMC4wLDI1Ljg3NDM2MzMyNzY3NDAyNSIgLz48L3N2Zz4=" class="spark-img" alt="trend" />
-            </div>
-            <div class="market-item">
-                <span class="market-name">Oil:</span>
-                <span class="market-price">108.17</span>
-                <span class="market-change down">-2.02%</span>
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMzAiPjxwb2x5bGluZSBmaWxsPSJub25lIiBzdHJva2U9IiMyN2FlNjAiIHN0cm9rZS13aWR0aD0iMiIgcG9pbnRzPSIwLjAsMjcuODk0NDg4OTMwNzU4MzUgNy4xNDI4NTcxNDI4NTcxNDIsMzAuMCAxNC4yODU3MTQyODU3MTQyODUsMzAuMCAyMS40Mjg1NzE0Mjg1NzE0MjcsMjMuOTIzNjkyODg3NDIzNDQyIDI4LjU3MTQyODU3MTQyODU3LDI1Ljk4NjgxMTExNjM0NDc5IDM1LjcxNDI4NTcxNDI4NTcxNSwxMi43MzE5ODMwNDI4NjM4NzcgNDIuODU3MTQyODU3MTQyODU0LDYuODY3NjQwMTMxODg4ODM3IDUwLjAsMTYuNzE2OTEwMDMyOTcyMiA1Ny4xNDI4NTcxNDI4NTcxNCwxNy42MzU0MjE1NzMyNDU0MSA2NC4yODU3MTQyODU3MTQyOSwxNC4yNzIyNTYyNDExNjgxNDcgNzEuNDI4NTcxNDI4NTcxNDMsMTMuMDcxMTI1NzY1NDI2MjgxIDc4LjU3MTQyODU3MTQyODU3LDEwLjgxMDE3NDI4MTY3Njg3OSA4NS43MTQyODU3MTQyODU3MSwwLjg0Nzg1NjgwNjQwNjAyMTIgOTIuODU3MTQyODU3MTQyODYsMC4wIDEwMC4wLDMuOTI4NDAzMjAzMDE0NjAzNyIgLz48L3N2Zz4=" class="spark-img" alt="trend" />
-            </div>
-        </div>
-        <div class="category-section">
-            <div class="category-title">UK</div>
-            <div class="news-grid">
-                <div class="source-column">
-                    <div class="source-name">BBC News</div>
-                    <ul>
-                        <li>
-                            <a href="https://www.bbc.com/news/articles/cj9pn2v7m2wo?at_medium=RSS&at_campaign=rss" target="_blank">Some protests may need to be stopped, PM suggests, after calls for pause on pro-Palestinian marches</a>
-                            <span class="meta">05:00 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.bbc.com/news/articles/c3w2qp5gzn0o?at_medium=RSS&at_campaign=rss" target="_blank">'I bought a baseball cap to hide my kippah': Jews observe first Shabbat after Golders Green attack</a>
-                            <span class="meta">05:00 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.bbc.com/news/articles/c0729d374mxo?at_medium=RSS&at_campaign=rss" target="_blank">US to cut troop levels in Germany by 5,000 amid Trump spat with Merz</a>
-                            <span class="meta">22:35 01 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.bbc.com/news/articles/c4g4xexy4w7o?at_medium=RSS&at_campaign=rss" target="_blank">Trump tells Congress ceasefire means he does not need their approval for Iran war</a>
-                            <span class="meta">00:41 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.bbc.com/news/articles/c794zlx5lx8o?at_medium=RSS&at_campaign=rss" target="_blank">Trump claims other presidents flouted war powers law. It's a mixed record</a>
-                            <span class="meta">02:43 02 May</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="source-column">
-                    <div class="source-name">The Guardian</div>
-                    <ul>
-                        <li>
-                            <a href="https://www.theguardian.com/lifeandstyle/2026/may/02/rare-twins-different-dads-the-gift-bbc-radio-4" target="_blank">‘It’s super weird, super odd, super rare’: meet the twins who have different dads</a>
-                            <span class="meta">05:00 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.theguardian.com/world/ng-interactive/2026/may/02/what-happens-when-deaths-outnumber-births" target="_blank">The tipping point: what happens when deaths outnumber births?</a>
-                            <span class="meta">05:00 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.theguardian.com/lifeandstyle/2026/may/02/blind-date-josh-hannah" target="_blank">Blind date: ‘What would I change? Nothing. It was perfect’</a>
-                            <span class="meta">05:00 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.theguardian.com/uk-news/2026/may/02/east-west-rail-oxford-milton-keynes-chiltern-railways-delays" target="_blank">‘People can see it – but can’t use it’: mystery of completed East-West Rail line that has no passenger trains</a>
-                            <span class="meta">06:00 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.theguardian.com/commentisfree/2026/may/02/king-charles-iii-washington-britain-bacon-us-save-itself" target="_blank">The king went to Washington to save Britain’s bacon. He may also have shown the US how to save itself | Simon Tisdall</a>
-                            <span class="meta">05:00 02 May</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="source-column">
-                    <div class="source-name">The Independent</div>
-                    <ul>
-                        <li>
-                            <a href="https://www.independent.co.uk/news/world/europe/trump-merz-us-troops-germany-nato-europe-b2969338.html" target="_blank">Trump is now dealing with an irate, tough Germany. Here’s why</a>
-                            <span class="meta">07:05 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.independent.co.uk/news/world/europe/bayesian-superyacht-sinking-mike-lynch-italy-b2969327.html" target="_blank">Bayesian superyacht sinking ‘not caused by storm’, says preliminary report</a>
-                            <span class="meta">06:20 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.independent.co.uk/tv/news/trump-iran-war-treason-new-proposal-video-b2969326.html" target="_blank">Trump says it’s ‘treasonous’ to say US not winning war in Iran</a>
-                            <span class="meta">06:17 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.independent.co.uk/news/world/americas/us-politics/us-withdrawing-5000-troops-germany-trump-merz-b2969324.html" target="_blank">Trump orders US to pull thousands of troops out of Germany after row with Merz</a>
-                            <span class="meta">21:57 01 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.independent.co.uk/news/world/middle-east/iran-us-war-live-trump-strait-hormuz-blockade-b2969303.html" target="_blank">Iran-US war latest: Trump ‘not satisfied’ with Tehran offer as he rules out ‘early’ end to war</a>
-                            <span class="meta">06:03 02 May</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    </style></head><body>
+<div class="container">
+<h1>Cybertarge (tm) Daily News Briefing</h1>
+<p class="timestamp">Generated on: 2026-05-02 14:17:53</p>
+<div class="market-strip">
+<div class="market-item"><span class="market-name">New York:</span><span class="market-price">7,230.12</span><span class="market-change up">+0.29%</span><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMzAiPjxwb2x5bGluZSBmaWxsPSJub25lIiBzdHJva2U9IiMyN2FlNjAiIHN0cm9rZS13aWR0aD0iMiIgcG9pbnRzPSIwLjAsMTguNzkzNTcwNTI1NTU1MyA3LjE0Mjg1NzE0Mjg1NzE0MiwxOC43OTM1NzA1MjU1NTUzIDE0LjI4NTcxNDI4NTcxNDI4NSwxOC43OTM1NzA1MjU1NTUzIDIxLjQyODU3MTQyODU3MTQyNywyMS44NDkzNzY5MTg5MDkxMjIgMjguNTcxNDI4NTcxNDI4NTcsMzAuMCAzNS43MTQyODU3MTQyODU3MTUsMTYuNjU1MjI4NDYzMDY2NzIgNDIuODU3MTQyODU3MTQyODU0LDIxLjk4MzAyMzI5NzgxNDc5IDUwLjAsMTEuNzQ2NDMzMDg2NTA4OTU4IDU3LjE0Mjg1NzE0Mjg1NzE0LDExLjc0NjQzMzA4NjUwODk1OCA2NC4yODU3MTQyODU3MTQyOSwxMS43NDY0MzMwODY1MDg5NTggNzEuNDI4NTcxNDI4NTcxNDMsMTAuMTUxNzA2NzAwMzc5MjkzIDc4LjU3MTQyODU3MTQyODU3LDE2LjQ5MjY4NTU2OTgwMzEyMiA4NS43MTQyODU3MTQyODU3MSwxNy4wMDc0MDQ3MzE4MDQyNyA5Mi44NTcxNDI4NTcxNDI4NiwzLjgxMjUzMzg2MzEwMjcxMTMgMTAwLjAsMC4wIiAvPjwvc3ZnPg==" class="spark-img" alt="trend" /></div>
+<div class="market-item"><span class="market-name">London:</span><span class="market-price">10,363.93</span><span class="market-change down">-0.14%</span><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMzAiPjxwb2x5bGluZSBmaWxsPSJub25lIiBzdHJva2U9IiNlNzRjM2MiIHN0cm9rZS13aWR0aD0iMiIgcG9pbnRzPSIwLjAsMC4wIDcuMTQyODU3MTQyODU3MTQyLDAuMCAxNC4yODU3MTQyODU3MTQyODUsMC4wIDIxLjQyODU3MTQyODU3MTQyNywzLjg2NDUxNjQxMjkxOTA4NzQgMjguNTcxNDI4NTcxNDI4NTcsMTEuMTkwMjY2NjU0OTMyNjUgMzUuNzE0Mjg1NzE0Mjg1NzE1LDEyLjYxNzkyNjYwMzg4OTg2IDQyLjg1NzE0Mjg1NzE0Mjg1NCwxMy45MDE2OTg0OTUxMTU3MDMgNTAuMCwxOS4wNDUzNjY1NDA1MjYyOCA1Ny4xNDI4NTcxNDI4NTcxNCwxOS4wNDUzNjY1NDA1MjYyOCA2NC4yODU3MTQyODU3MTQyOSwxOS4wNDUzNjY1NDA1MjYyOCA3MS40Mjg1NzE0Mjg1NzE0MywyMi44NzI5MjA4ODM1Njk0ODUgNzguNTcxNDI4NTcxNDI4NTcsMjIuMTAwNjc3NjM3OTQ3NjgzIDg1LjcxNDI4NTcxNDI4NTcxLDMwLjAgOTIuODU3MTQyODU3MTQyODYsMTkuMDYyNTI3NTAxNTQwMTEgMTAwLjAsMjAuMDQ1MzIyNTM4MDYyMTIzIiAvPjwvc3ZnPg==" class="spark-img" alt="trend" /></div>
+<div class="market-item"><span class="market-name">Delhi:</span><span class="market-price">23,997.55</span><span class="market-change down">-0.74%</span><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMzAiPjxwb2x5bGluZSBmaWxsPSJub25lIiBzdHJva2U9IiNlNzRjM2MiIHN0cm9rZS13aWR0aD0iMiIgcG9pbnRzPSIwLjAsOS44NjAwMTYyMDg2NDk1MjYgNy4xNDI4NTcxNDI4NTcxNDIsOS44NjAwMTYyMDg2NDk1MjYgMTQuMjg1NzE0Mjg1NzE0Mjg1LDkuODYwMDE2MjA4NjQ5NTI2IDIxLjQyODU3MTQyODU3MTQyNyw5LjM2MDQ5NTEwMDU2NzMzIDI4LjU3MTQyODU3MTQyODU3LDAuMCAzNS43MTQyODU3MTQyODU3MTUsOC43NzQ3NzM0NDcyODUwNzggNDIuODU3MTQyODU3MTQyODU0LDE3LjgzOTA5MjMxNTYyNjYzNyA1MC4wLDMwLjAgNTcuMTQyODU3MTQyODU3MTQsMzAuMCA2NC4yODU3MTQyODU3MTQyOSwzMC4wIDcxLjQyODU3MTQyODU3MTQzLDIxLjM5MDk5NjgzMTk0NTc1IDc4LjU3MTQyODU3MTQyODU3LDI1LjY3ODkyMTM4ODA0OTc5IDg1LjcxNDI4NTcxNDI4NTcxLDE3LjYzNTc0NzQzOTc3MDA2IDkyLjg1NzE0Mjg1NzE0Mjg2LDI1LjU5NzE0MTM4MzYyOTMxNCAxMDAuMCwyNS41OTcxNDEzODM2MjkzMTQiIC8+PC9zdmc+" class="spark-img" alt="trend" /></div>
+<div class="market-item"><span class="market-name">Dubai:</span><span class="market-price">5,766.85</span><span class="market-change up">+0.01%</span><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMzAiPjxwb2x5bGluZSBmaWxsPSJub25lIiBzdHJva2U9IiNlNzRjM2MiIHN0cm9rZS13aWR0aD0iMiIgcG9pbnRzPSIwLjAsMC4wIDcuMTQyODU3MTQyODU3MTQyLDAuMCAxNC4yODU3MTQyODU3MTQyODUsMC4wIDIxLjQyODU3MTQyODU3MTQyNywxNi45ODE5NzU4Nzc0OTAyMzUgMjguNTcxNDI4NTcxNDI4NTcsMTQuNzkwNjIyMDM1NTA2MjE3IDM1LjcxNDI4NTcxNDI4NTcxNSwyMy4yMjY3MjQ0ODg0MTMxMiA0Mi44NTcxNDI4NTcxNDI4NTQsMjMuNDk2NDA4NzI3NDY5ODczIDUwLjAsMTguMDU1MjkyMDQ0OTkyNjIgNTcuMTQyODU3MTQyODU3MTQsMTguMDU1MjkyMDQ0OTkyNjIgNjQuMjg1NzE0Mjg1NzE0MjksMTguMDU1MjkyMDQ0OTkyNjIgNzEuNDI4NTcxNDI4NTcxNDMsMTUuODI4NzAzMDc2Mjk3NjM0IDc4LjU3MTQyODU3MTQyODU3LDE3LjU2MjAwMDI3MTAzOTQ2NiA4NS43MTQyODU3MTQyODU3MSwxNy4wOTE3NDY4NDkxNjY1NDcgOTIuODU3MTQyODU3MTQyODYsMzAuMCAxMDAuMCwyOS44OTE1ODQyMjU1MDQ3ODYiIC8+PC9zdmc+" class="spark-img" alt="trend" /></div>
+<div class="market-item"><span class="market-name">Gold:</span><span class="market-price">4,644.5</span><span class="market-change up">+0.32%</span><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMzAiPjxwb2x5bGluZSBmaWxsPSJub25lIiBzdHJva2U9IiNlNzRjM2MiIHN0cm9rZS13aWR0aD0iMiIgcG9pbnRzPSIwLjAsMy4wNzY0MDA2NzkxMTcyMjQzIDcuMTQyODU3MTQyODU3MTQyLDAuMCAxNC4yODU3MTQyODU3MTQyODUsOS43ODk0NzM2ODQyMTA1NjMgMjEuNDI4NTcxNDI4NTcxNDI3LDMuNTQ0OTkxNTExMDM1NjcyIDI4LjU3MTQyODU3MTQyODU3LDExLjk0OTA2NjIxMzkyMTkyIDM1LjcxNDI4NTcxNDI4NTcxNSwxMS41NjE5Njk0Mzk3MjgzNTEgNDIuODU3MTQyODU3MTQyODU0LDE2Ljc4Nzc3NTg5MTM0MTI3NiA1MC4wLDE1LjcwNzk3OTYyNjQ4NTY0NCA1Ny4xNDI4NTcxNDI4NTcxNCwxNC4xMjkwMzIyNTgwNjQ1ODkgNjQuMjg1NzE0Mjg1NzE0MjksMTguNTE5NTI0NjE3OTk2NjIzIDcxLjQyODU3MTQyODU3MTQzLDE3LjM4ODc5NDU2NzA2Mjg5IDc4LjU3MTQyODU3MTQyODU3LDI3LjI0OTU3NTU1MTc4MjY4NCA4NS43MTQyODU3MTQyODU3MSwzMC4wIDkyLjg1NzE0Mjg1NzE0Mjg2LDI1LjA0OTIzNTk5MzIwODg4IDEwMC4wLDI1Ljg3NDM2MzMyNzY3NDAyNSIgLz48L3N2Zz4=" class="spark-img" alt="trend" /></div>
+<div class="market-item"><span class="market-name">Oil:</span><span class="market-price">108.17</span><span class="market-change down">-2.02%</span><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMzAiPjxwb2x5bGluZSBmaWxsPSJub25lIiBzdHJva2U9IiMyN2FlNjAiIHN0cm9rZS13aWR0aD0iMiIgcG9pbnRzPSIwLjAsMjcuODk0NDg4OTMwNzU4MzUgNy4xNDI4NTcxNDI4NTcxNDIsMzAuMCAxNC4yODU3MTQyODU3MTQyODUsMzAuMCAyMS40Mjg1NzE0Mjg1NzE0MjcsMjMuOTIzNjkyODg3NDIzNDQyIDI4LjU3MTQyODU3MTQyODU3LDI1Ljk4NjgxMTExNjM0NDc5IDM1LjcxNDI4NTcxNDI4NTcxNSwxMi43MzE5ODMwNDI4NjM4NzcgNDIuODU3MTQyODU3MTQyODU0LDYuODY3NjQwMTMxODg4ODM3IDUwLjAsMTYuNzE2OTEwMDMyOTcyMiA1Ny4xNDI4NTcxNDI4NTcxNCwxNy42MzU0MjE1NzMyNDU0MSA2NC4yODU3MTQyODU3MTQyOSwxNC4yNzIyNTYyNDExNjgxNDcgNzEuNDI4NTcxNDI4NTcxNDMsMTMuMDcxMTI1NzY1NDI2MjgxIDc4LjU3MTQyODU3MTQyODU3LDEwLjgxMDE3NDI4MTY3Njg3OSA4NS43MTQyODU3MTQyODU3MSwwLjg0Nzg1NjgwNjQwNjAyMTIgOTIuODU3MTQyODU3MTQyODYsMC4wIDEwMC4wLDMuOTI4NDAzMjAzMDE0NjAzNyIgLz48L3N2Zz4=" class="spark-img" alt="trend" /></div>
 </div>
-        <div class="category-section">
-            <div class="category-title">Global & Business</div>
-            <div class="news-grid">
-                <div class="source-column">
-                    <div class="source-name">Al Jazeera</div>
-                    <ul>
-                        <li>
-                            <a href="https://www.aljazeera.com/news/2026/5/2/china-urges-reversal-of-unifil-departure-from-lebanon-as-conflict-escalates?traffic_source=rss" target="_blank">China urges reversal of UNIFIL departure from Lebanon as conflict escalates</a>
-                            <span class="meta">06:47 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.aljazeera.com/news/2026/5/2/iran-war-whats-happening-on-day-64-as-trump-rejects-tehrans-proposal?traffic_source=rss" target="_blank">Iran war: What’s happening on day 64 as Trump rejects Tehran’s proposal</a>
-                            <span class="meta">06:27 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.aljazeera.com/sports/2026/5/2/pistons-and-raptors-survive-while-la-lakers-progress-in-nba-playoffs?traffic_source=rss" target="_blank">Pistons and Raptors survive while LA Lakers progress in NBA playoffs</a>
-                            <span class="meta">06:08 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.aljazeera.com/news/2026/5/2/us-embassy-warns-citizens-in-uk-as-threat-level-raised-to-severe?traffic_source=rss" target="_blank">US embassy warns citizens in UK as threat level raised to ‘severe’</a>
-                            <span class="meta">06:04 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.aljazeera.com/video/newsfeed/2026/5/2/trump-says-us-forces-are-like-pirates-taking-iranian-oil?traffic_source=rss" target="_blank">Trump says US forces are ‘like pirates’ taking Iranian oil</a>
-                            <span class="meta">04:35 02 May</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-</div>
-        <div class="category-section">
-            <div class="category-title">Middle East</div>
-            <div class="news-grid">
-                <div class="source-column">
-                    <div class="source-name">Khaleej Times</div>
-                    <ul>
-                        <li>
-                            <a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxOQmxYaTBSNUk1VjNyeF9GTnVCSUN5ZVk1YkYyRUxxVHhsNElNc1FPZWtjN3B6LVRvXzdFMXhMeWp3cVUyN19DcDVSTTJvdHVHdENzcjdRam55ZDJiRHZxNlBiSXFsUXVOcm8tRkpVMU9FX3lUX3RSSUdhSW9ETzkxZVg1QkNFQ3dYdmd4TGRvUVlWbzh0U242aWxjSW5VaDhEajdhWEN2OGRyVHE2M1Bn0gG3AUFVX3lxTFBoanF1UnV2Um5WXy1sS2pVQ0lxZUhrQ0l4U2laUEsySkNuSldiUkxlUUdiMXo5S1VlN3Z3OEpqTHl1Wld1LXpUNXJ4VEpDZEppcGh2a0NGX1lPUndHcHNRYThqN3hxbkZQdmRNM1dselNzNzVKenZ0MkRWcF8zQ1pLVjUtWS1peWhpZlBiMXFVb09wYVNFcFFqekFKYVE4Ul91Mjk0b3hCU0J2OUx3a25WU1Z6SllnYw?oc=5" target="_blank">How AI is boosting cybercrime and why enterprises are not keeping pace - Khaleej Times</a>
-                            <span class="meta">02:00 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxPNHV4bW5iWUNxdzUtbXRPbEVzQUgzSnV2Y2M4T2gxTnlrZmJkWWliWE1kQjBidGVTd1I2cWxzeTVrS2k1QXdmQnVJdDl4UnRtcnpnNkpYblRLdDR4N19xdXhnSjE3T1lxX0pXZVkwUHVJMDR3VUF3UWx0ZnJqX1FsZ2VOTUhoWG9hbHdvcGRoQnZBbHQwbjRfbzAxcUUyaGxvNmtF0gGrAUFVX3lxTE5LdjNrMXFWN29zc3BKMkZxUnRjdnJTMnFVVGVzYXBhRXpFZG1kXzRiSFBONGxsd2dIc2IzV2o3dXh5YlR4LUhCSDFSbVdHMy0xNFZOZnlZeDJVTmdLc01nUmd2R2VxSW1OdWpXNGNTMDJ5RmVhc3lQdkVXRklhTjZpVU9EM3U3YklRcVppZHFvZmR0eWVxa3Fhcl9sVTBDaXg1VkQ5akw0STNNYw?oc=5" target="_blank">Spirit Airlines begins 'wind-down', cancels all flights - Khaleej Times</a>
-                            <span class="meta">07:07 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxNb0YxTzlMeHhFRGhmTDYxUTQ3ZkZrdU56OF9sWmFVS3JIcGZyb0hrM2dHRG5hZ0NqbGZsaUpaNzVQNnNtRjB0YTNZcHF6TUZ1UWNidlpLWGRxRzJCODhwLTd0MTM5LTRRZWxLNzlfaW03TjhDRlF5WXVvclpfUFBiZnduM0JUOUdRMHM0M3FsVWlhZDUzaUY2OHJ2UTF0WnNu0gGoAUFVX3lxTE9jWHB5Y1VPT3hRVEtHY0RoOUZaOGFKcnhqVlRVM1FJTDlZVzdOTF9HQS1reHU2d2pRM29pYl9JMC1mRC1OZENLZXZRSUZvUDVIeHIwb3BydktPWUU0QUNPVEdPNHBBelVlTlNIdDZ4R01HMjJwbjlyWlE4WFNvZjRiN2YzWDlxWElvZGZENC1pT0Vwb2stV3BPN09wZDNFMmVMWGRFTTB6ZA?oc=5" target="_blank">Trump gives Spirit final rescue proposal as airline prepares shutdown - Khaleej Times</a>
-                            <span class="meta">04:04 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxNWnhJdUppT2J5LTdCRS1OX3F4a1ExcnRMdFFrdXFBTkpGeS1yeFJEWi1PVnBUNjNrM05XREdsWHNFa04zMTRZc1RJUUJCODlWUnVFN3FqaWFtVlpHWHBHSFBCOGtVaFBBd09lc1VldHlDUE1uVXc4OURONzRXcjgyMVpKYlREMlprOWstUElQcWpyMUttWkdjRTFSNnTSAaQBQVVfeXFMT0w2VC1oRExLT2lGYUhzeWV0eF9ialFMX2xia3c1ZHIxSlB0T0ZGOThLbGhLQ0YwYW9qWGFSWG82ME9UbHZqNXA0SEk2MjZ5Q3d2OW1HUV9reUQwWUhxV2tsYnE4a3dyWDhPVTdVYVhuaEdjclhWS2UxMmMzaFhCWnBsOThCcjZXMmxBSnJkcWVJUlFTWTVhU0haRVhHbzFKSHJZOVc?oc=5" target="_blank">'Do not panic': India tests emergency alerts on smartphones - Khaleej Times</a>
-                            <span class="meta">07:11 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxPVk1ibnpRS0hoNDZIS2lOWlIyY1gzdGtnM0N4a0Y3ejU1aTBCVG5SMGptNllpcTJ4ZjBmTzhjVUdnN2dNMVZhbzlJYV9qaU12d0ZHd3NLTURwUGxDWmpwc3NaSHFDT1dmaEYtSmJJZUpDZHhMSW1CQUdWLS0xa0NBbUZZd9IBiwFBVV95cUxQY1NKT2xtREdQcmlfd1V1My1ER3QyT1lwWTJBR2ZSY21KbWhTUEhJT1lTRzVGTlo2U253LVk1UmJXZHNoZTZ4RXNHVUxDUUZubzRCbDBZVjktM2h3VHMtRnlYOHdZeVVpWTNKcTU2dzhFelJqRnhHbUladkR5Uk9URG4wd2dGVllZdHIw?oc=5" target="_blank">Lebanon says Israeli strikes in south kill 13, including a child - Khaleej Times</a>
-                            <span class="meta">04:19 02 May</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="source-column">
-                    <div class="source-name">Gulf News</div>
-                    <ul>
-                        <li>
-                            <a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxOdWx5aF91RFh6Um02OHpSZnRXWFZLTzJEci1yUHRGNjZZN2F0QkFmak1BaWlMUlFOdGpOMnFxV3JYU1JOcUR1VUpnYjBNRzRBRE9pbGxXU1FHVk9pRk9fRkJfSjZxU3ZmZ3lIdnRFRkJiSndCUFpuZVhCelpMWVlBNU5SaTJxMjkzOXItZllUN2Q2UWV2VmdOdDU1ZU8xYW5pRVlneFdxM0NiVTdLWktsbEh1UdIBxgFBVV95cUxQNTZJc0pYYV9CTUpYWlYzekJ1bHZ5bU91Y3FKMks0QXhHd1A0WjBnTVI0Wlo5SXBweVVGUzM3TXlyTDI0LXJKcVVobGpKSzNNR1BYaHMwcGh3bDFia1hqcG9tam00UUtIQnJqbng3THpRVlZHZXhNU0FFSHMxeTFKNkxvOE5MbjFwNDJScl93QjI5S2hmTldrLXNCejdpS1FCTTZ3cFRncVI2RVdLZzRtSFo4eXJGU1VBR2lCNkthaTR6Rk5iRlE?oc=5" target="_blank">No pages, no books: Audible launches ‘bookless bookstore’ in New York - Gulf News</a>
-                            <span class="meta">07:03 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxQTFNnWlBFallsYzBWaXNpaGRqRENtZEVramtCcGZ4TTBhYkFRWGphRU5pZ2w2cWdfZHpBSUF4RmV0RW03SVk2WC1nekpyTUY3NkpFZXhnOXlhSmdxWHRKOVRQaERiTy1INldQZ3hFMVJ4Z0JfWVlhTGNOWXpHSG9mWmtrTFJfUERXSzI3M2pxNW44Q2NiZkdJemI5Y0VuZjhh?oc=5" target="_blank">Pentagon claims US blockade has cost Iran $4.8 billion - Gulf News</a>
-                            <span class="meta">04:39 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxOaHg1c3ZnN3MyVlV0bThlMGV6UkxlVEVEX1dEV2c5V1RRcnpTYXFlTzQ5S1NVQjBaSkcwcDUxZXVUaV9TdTdOTHpOaVUtdTNjSlY2UVhvdnZGMjVRaTY2UFBrT21WMUhNV0tDTHRYN2JYN2hLc2xSVDIxd081Wmh2Z3kyNlBLeTRmVHVfY3lFS2pZeHE2ZVh5REl3VGpkN29XTk9uaFRGXzNkWmxPN0UzSU1FT0ppeER6YWfSAcwBQVVfeXFMT2RBdkRyTzlkMGJoWENfUmd2SmluRGg2UU1jOTlBelNOMG5uYnluZTU2SmdleDhvZkh4cHp4N0EwQ2NrTm12cFFhZnpTdkpCdlF2aTBrdXlHRF9ScjBaU2ZYdjJ6c3hhTXFORjFjZXpnTzh1enhBcmtGcWltbnMwUW9INEhtcUkxUUZsOWpPazBLM3NFTVhVUE1PMXp6Tk1LSkxpV0hrUXRBM2FiQkwxSlBuNWN1R3RERzJYUzdoOFl5VFBPeXFoajV4UGY3?oc=5" target="_blank">16 US military sites in Mideast damaged during war with Iran, report claims - Gulf News</a>
-                            <span class="meta">05:40 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxQUVMyRGxNVER4T0dVZ295RnBqX054cl9ZbWtia2xDbGJ5ZzRFNHladWFXU3VpaXQ0d085ZE1fM3Y1RkM2d3FDZ000aWFMUlV3T3AzOTRpQzdjMWFEUFdHdlNRMTZWcS16N3dqYms5WlVid0RNTC1MNnRhX05PQXdReTlKWUp3R0NHNWhZNW5sS1o1a2RqOFcyWW54ZWc4VnPSAbIBQVVfeXFMT2REcGw4ZnRIVF8tckxIWVZOQkVCYnN0Z0FYcmxZaXJmQmZYRHl0aEhMQVRRcVFhTVV3Y0Z1RlJwR3pISWlrd1htVmpyM3hNUDNFSXVQUkZuRkxnTGVORy1FUk4xU0kyYmp1c0R0cXA0SmxFelFwTUFxaVZoZ1lRcGZ6eGZZODB6eC02b1ZfTUc3djV5SE1IUXZISXZ0T0hpYkcxb0RYZnQ0UjZGUnd4ZTVnQQ?oc=5" target="_blank">Russia, Iran discuss Gulf security and nuclear tensions - Gulf News</a>
-                            <span class="meta">05:19 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxNcWZ6T1oxdUVDZnJxb3gtWmhDREtqaTZlUTdXTXIyVXZEd09LdmI0V0dTS0JCb0R6SzZRS3ZuMGNWT05wZW4xQ3o2WmN1c2g5RFVOa0FrNTZLRkNuVXRuNWx1akdCU0prd2lYZkNIX0xha1FKS1Z4UE9lUWFSNGVDV1NBOHhEQlVkMlJPZ0tJZTJWdTZwb29GcWN1ckTSAa8BQVVfeXFMTlpDUkdYbzlmTWxlUjNlcS1pdlZiTmNwMjM5TEJCdlNIOVF0VTQ1RXpHbzVYVDk5cHl0Y0tFM21USVVJQ1F6amM1WnI4RUYxdDRvU3dZZU5HbFhkQlA5X3pIUWJtLXdNcWVSZE5adUJoWk4yZVJGbFNnMHpVQVo1a2hSM2tnRmhUeFh3OTNFem5VU2dQbUZrUllJMzF4cUQtalBhVlhoMXBCbU5JQmVkUQ?oc=5" target="_blank">US aircraft carrier Gerald R. Ford leaves Middle East - Gulf News</a>
-                            <span class="meta">04:30 02 May</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-</div>
-        <div class="category-section">
-            <div class="category-title">US & Politics</div>
-            <div class="news-grid">
-                <div class="source-column">
-                    <div class="source-name">NBC News</div>
-                    <ul>
-                        <li>
-                            <a href="https://www.nbcnews.com/politics/white-house/trump-congressional-authorization-iran-military-operation-war-powers-rcna343094" target="_blank">Trump says he doesn't need congressional authorization for Iran war, citing ceasefire</a>
-                            <span class="meta">18:28 01 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.nbcnews.com/politics/2028-election/billionaire-illinois-gov-jb-pritzker-not-fully-self-finance-2028-run-rcna343122" target="_blank">Billionaire Gov. JB Pritzker explores something new in 2028: Raising money</a>
-                            <span class="meta">19:59 01 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.nbcnews.com/politics/2026-election/alabama-governor-calls-special-session-move-primaries-redistricting-ge-rcna343125" target="_blank">Alabama and Tennessee set special sessions to consider new congressional maps</a>
-                            <span class="meta">19:09 01 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.nbcnews.com/politics/national-security/us-asks-help-opening-strait-hormuz-trump-attacks-allies-rcna343082" target="_blank">U.S. asks for help with opening Strait of Hormuz while Trump attacks allies</a>
-                            <span class="meta">16:41 01 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.nbcnews.com/nightly-news/video/trump-administration-to-pull-5-000-troops-from-germany-262564421559" target="_blank">Trump administration to pull 5,000 troops from Germany</a>
-                            <span class="meta">22:44 01 May</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="source-column">
-                    <div class="source-name">NPR</div>
-                    <ul>
-                        <li>
-                            <a href="https://www.npr.org/2026/05/02/nx-s1-5807933/spirit-airlines-ceases-operations-folds" target="_blank">Spirit Airlines ceases operations after escalating financial struggles</a>
-                            <span class="meta">02:42 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.npr.org/2026/05/02/g-s1-119866/trump-new-air-force-one" target="_blank">Air Force says former Qatari 747 will be ready to fly as Air Force One this summer</a>
-                            <span class="meta">01:49 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.npr.org/2026/05/02/g-s1-119864/u-s-withdraw-troops-germany" target="_blank">U.S. to withdraw 5,000 troops from Germany in next 6-12 months</a>
-                            <span class="meta">01:33 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.npr.org/2026/05/02/nx-s1-5798892/wyoming-celebrates-nuclear-renaissance-as-feds-approve-license-for-a-new-reactor" target="_blank">Wyoming celebrates 'nuclear renaissance' as feds approve license for a new reactor</a>
-                            <span class="meta">00:01 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.npr.org/2026/05/01/nx-s1-5808328/court-restricts-abortion-access-mailing-mifepristone" target="_blank">Court restricts abortion access across the US by blocking the mailing of mifepristone</a>
-                            <span class="meta">18:40 01 May</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="source-column">
-                    <div class="source-name">New York Times</div>
-                    <ul>
-                        <li>
-                            <a href="https://www.nytimes.com/2026/05/01/us/politics/us-troops-germany.html" target="_blank">U.S. to Withdraw 5,000 Troops From Germany, Pentagon Says</a>
-                            <span class="meta">00:51 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.nytimes.com/2026/05/01/us/politics/trump-congress-authorization-iran-war.html" target="_blank">Trump Tells Congress Why He Doesn’t Need Its Authorization for the Iran War</a>
-                            <span class="meta">22:00 01 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.nytimes.com/2026/05/01/well/abortion-drugs-mail-order.html" target="_blank">Federal Appeals Court Temporarily Halts Abortion Pill Access by Mail</a>
-                            <span class="meta">01:16 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.nytimes.com/2026/05/01/business/obamacare-enrollment-decline.html" target="_blank">Obamacare Enrollment Drops Sharply as Costs Rise</a>
-                            <span class="meta">19:15 01 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.nytimes.com/2026/05/01/business/fda-pancreatic-cancer-drug.html" target="_blank">F.D.A. Grants Early Access to Promising Drug for Pancreatic Cancer</a>
-                            <span class="meta">21:28 01 May</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="source-column">
-                    <div class="source-name">Washington Post</div>
-                    <ul>
-                        <li>
-                            <a href="https://www.washingtonpost.com/politics/2026/05/02/spirit-airlines-flights-shutdown/" target="_blank">Spirit Airlines shuts down after White House rescue deal falls through</a>
-                            <span class="meta">06:55 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.washingtonpost.com/politics/2026/05/01/kentucky-trump-mcconnell-barr/" target="_blank">Trump endorses Andy Barr in race to succeed Mitch McConnell</a>
-                            <span class="meta">02:55 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.washingtonpost.com/politics/2026/05/01/alabama-tennessee-gerrymandering-congress-vra/" target="_blank">Two more Southern states move toward adding Republican House seats</a>
-                            <span class="meta">00:09 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.washingtonpost.com/politics/2026/05/01/donald-trump-villages-florida-whcd/" target="_blank">Trump returns to public events, delivering profane speech</a>
-                            <span class="meta">00:04 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.washingtonpost.com/national-security/2026/05/01/us-troops-germany-trump-merz/" target="_blank">Trump to downsize U.S. military presence in Germany</a>
-                            <span class="meta">00:03 02 May</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-</div>
-        <div class="category-section">
-            <div class="category-title">Tech</div>
-            <div class="news-grid">
-                <div class="source-column">
-                    <div class="source-name">Hacker News</div>
-                    <ul>
-                        <li>
-                            <a href="https://www.noctua.at/en/expertise/blog/how-can-it-take-so-long-to-release-black-fan-versions" target="_blank">Why does it take so long to release black fan versions?</a>
-                            <span class="meta">04:38 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.citadelsecurities.com/news-and-insights/2026-global-intelligence-crisis/" target="_blank">Job Postings for Software Engineers Are Rapidly Rising</a>
-                            <span class="meta">01:46 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://education.ti.com/en/products/calculators/graphing-calculators/ti-84-evo" target="_blank">Ti-84 Evo</a>
-                            <span class="meta">20:06 01 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.spiritrestructuring.com/" target="_blank">Spirit Airlines Is Winding Down All Operations</a>
-                            <span class="meta">06:28 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.ask.com/" target="_blank">Ask.com has closed</a>
-                            <span class="meta">04:12 02 May</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="source-column">
-                    <div class="source-name">The Verge</div>
-                    <ul>
-                        <li>
-                            <a href="https://www.theverge.com/gadgets/920848/splatoon-raiders-physical-edition-preorder-switch-2-walmart-deal-sale" target="_blank">Splatoon Raiders preorders for the Switch 2 are nearly 20 percent off</a>
-                            <span class="meta">18:31 01 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.theverge.com/tech/922531/microsoft-windows-11-run-menu-redesign-test" target="_blank">Microsoft tests redesigned Windows 11 Run menu with dark mode and more</a>
-                            <span class="meta">18:01 01 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.theverge.com/tech/922572/apple-mac-mini-256-model" target="_blank">Apple raises the Mac Mini&#8217;s starting price</a>
-                            <span class="meta">17:52 01 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial" target="_blank">All the evidence revealed so far in Musk v. Altman</a>
-                            <span class="meta">15:14 01 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.theverge.com/gadgets/922165/netvue-birdfy-smart-bird-feeder-bath-mothers-day-deal-sale" target="_blank">Birdfy’s smart bird feeder is down to its best-ever price for Mother’s Day</a>
-                            <span class="meta">14:42 01 May</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="source-column">
-                    <div class="source-name">TechCrunch</div>
-                    <ul>
-                        <li>
-                            <a href="https://techcrunch.com/2026/05/01/uber-wants-to-turn-its-millions-of-drivers-into-a-sensor-grid-for-self-driving-companies/" target="_blank">Uber wants to turn its millions of drivers into a sensor grid for self-driving companies</a>
-                            <span class="meta">06:36 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://techcrunch.com/2026/05/01/replits-amjad-masad-on-the-cursor-deal-fighting-apple-and-why-hed-rather-not-sell/" target="_blank">Replit’s Amjad Masad on the Cursor deal, fighting Apple, and why he’d rather not sell</a>
-                            <span class="meta">23:06 01 May</span>
-                        </li>
-                        <li>
-                            <a href="https://techcrunch.com/2026/05/01/musely-secures-360m-from-general-catalyst-without-giving-up-equity/" target="_blank">Musely secures $360M from General Catalyst without giving up equity</a>
-                            <span class="meta">22:39 01 May</span>
-                        </li>
-                        <li>
-                            <a href="https://techcrunch.com/2026/05/01/meta-buys-robotics-startup-to-bolster-its-humanoid-ai-ambitions/" target="_blank">Meta buys robotics startup to bolster its humanoid AI ambitions</a>
-                            <span class="meta">22:13 01 May</span>
-                        </li>
-                        <li>
-                            <a href="https://techcrunch.com/2026/05/01/coatue-has-a-plan-to-buy-up-land-for-data-centers-possibly-for-anthropic/" target="_blank">Coatue has a plan to buy up land for data centers, possibly for Anthropic</a>
-                            <span class="meta">18:23 01 May</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="source-column">
-                    <div class="source-name">Wired</div>
-                    <ul>
-                        <li>
-                            <a href="https://www.wired.com/story/therabody-promo-code/" target="_blank">Therabody Promo Codes: 15% Off May 2026</a>
-                            <span class="meta">05:00 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.wired.com/story/canon-promo-code/" target="_blank">30% Off Canon Promo Codes | May 2026</a>
-                            <span class="meta">05:00 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.wired.com/story/surfshark-coupon/" target="_blank">Surfshark Promo Codes: 87% Off | May 2026</a>
-                            <span class="meta">05:00 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.wired.com/story/brooks-promo-code/" target="_blank">20% Off Brooks Promo Code & Deals for | May 2026</a>
-                            <span class="meta">05:00 02 May</span>
-                        </li>
-                        <li>
-                            <a href="https://www.wired.com/story/columbia-promo-code/" target="_blank">Columbia Promo Codes: 	15% Off | May2026</a>
-                            <span class="meta">05:00 02 May</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-</div>
-        <div class="footer"><p>Automated News & Market Aggregator</p></div>
-    </div>
-</body></html>
+<div class="category-section"><div class="category-title">UK</div>
+<div class="news-grid">
+<div class="source-column"><div class="source-name">BBC News</div><ul>
+<li><a href="https://www.bbc.com/news/articles/cj9pn2v7m2wo?at_medium=RSS&at_campaign=rss" target="_blank">Some protests may need to stop, PM suggests, after calls for pause on pro-Palestinian marches</a><span class="meta">05:00 02 May</span></li>
+<li><a href="https://www.bbc.com/news/articles/c3w2qp5gzn0o?at_medium=RSS&at_campaign=rss" target="_blank">'I bought a baseball cap to hide my kippah': Jews observe first Shabbat after Golders Green attack</a><span class="meta">05:00 02 May</span></li>
+<li><a href="https://www.bbc.com/news/articles/c0729d374mxo?at_medium=RSS&at_campaign=rss" target="_blank">US to cut troop levels in Germany by 5,000 amid Trump spat with Merz</a><span class="meta">08:14 02 May</span></li>
+<li><a href="https://www.bbc.com/news/articles/c5yx5w43jzko?at_medium=RSS&at_campaign=rss" target="_blank">Celebrity Traitors line-up announced - 21 famous faces set to enter castle</a><span class="meta">09:57 02 May</span></li>
+<li><a href="https://www.bbc.com/news/articles/cd7pn0zywggo?at_medium=RSS&at_campaign=rss" target="_blank">Thirteen killed in Israeli strikes on southern Lebanon, health ministry says</a><span class="meta">09:41 02 May</span></li>
+</ul></div>
+<div class="source-column"><div class="source-name">The Guardian</div><ul>
+<li><a href="https://www.theguardian.com/lifeandstyle/2026/may/02/rare-twins-different-dads-the-gift-bbc-radio-4" target="_blank">‘It’s super weird, super odd, super rare’: meet the twins who have different dads</a><span class="meta">05:00 02 May</span></li>
+<li><a href="https://www.theguardian.com/commentisfree/2026/may/02/britain-pioneered-comfortable-retirement-golden-age-end" target="_blank">Britain pioneered the comfortable retirement – but that golden age is coming to an end | Helen McCarthy</a><span class="meta">07:00 02 May</span></li>
+<li><a href="https://www.theguardian.com/uk-news/2026/may/02/east-west-rail-oxford-milton-keynes-chiltern-railways-delays" target="_blank">‘People can see it – but can’t use it’: mystery of completed East-West Rail line that has no passenger trains</a><span class="meta">06:00 02 May</span></li>
+<li><a href="https://www.theguardian.com/world/ng-interactive/2026/may/02/what-happens-when-deaths-outnumber-births" target="_blank">The tipping point: what happens when deaths outnumber births?</a><span class="meta">05:00 02 May</span></li>
+<li><a href="https://www.theguardian.com/lifeandstyle/2026/may/02/blind-date-josh-hannah" target="_blank">Blind date: ‘What would I change? Nothing. It was perfect’</a><span class="meta">05:00 02 May</span></li>
+</ul></div>
+<div class="source-column"><div class="source-name">The Independent</div><ul>
+<li><a href="https://www.independent.co.uk/news/world/europe/how-many-us-troops-europe-where-b2969373.html" target="_blank">How many American troops are in Europe and where are they?</a><span class="meta">09:11 02 May</span></li>
+<li><a href="https://www.independent.co.uk/news/world/middle-east/iran-us-war-live-trump-strait-hormuz-blockade-b2969303.html" target="_blank">Iran-US war latest: Germany responds to Trump’s decision to withdraw 5,000 troops as dispute deepens</a><span class="meta">08:39 02 May</span></li>
+<li><a href="https://www.independent.co.uk/news/world/americas/trump-west-virginia-bishop-menjivar-ayala-b2969361.html" target="_blank">Pope names Catholic priest who criticized Trump as West Virginia bishop</a><span class="meta">08:34 02 May</span></li>
+<li><a href="https://www.independent.co.uk/news/world/middle-east/lebanon-brink-humanitarian-crisis-israel-hezbollah-b2968272.html" target="_blank">Lebanon on brink of humanitarian catastrophe after two months of Israel’s war, aid agencies warn</a><span class="meta">08:16 02 May</span></li>
+<li><a href="https://www.independent.co.uk/news/world/americas/mexico-city-sinking-space-nasa-b2969353.html" target="_blank">Mexico City is sinking so fast that the subsidence can be spotted from space</a><span class="meta">08:12 02 May</span></li>
+</ul></div>
+</div></div>
+<div class="category-section"><div class="category-title">Global & Business</div>
+<div class="news-grid">
+<div class="source-column"><div class="source-name">Al Jazeera</div><ul>
+<li><a href="https://www.aljazeera.com/news/2026/5/2/japans-takaichi-pledges-deeper-energy-cooperation-with-vietnam?traffic_source=rss" target="_blank">Japan’s Takaichi pledges deeper energy cooperation with Vietnam</a><span class="meta">09:16 02 May</span></li>
+<li><a href="https://www.aljazeera.com/news/2026/5/2/spirit-airlines-begins-wind-down-cancels-all-flights-over-fuel-crisis?traffic_source=rss" target="_blank">Spirit Airlines begins ‘wind-down’, cancels all flights over fuel crisis</a><span class="meta">08:09 02 May</span></li>
+<li><a href="https://www.aljazeera.com/news/2026/5/2/uks-starmer-eyes-banning-some-pro-palestine-protests?traffic_source=rss" target="_blank">UK’s Starmer eyes banning some pro-Palestine protests</a><span class="meta">07:55 02 May</span></li>
+<li><a href="https://www.aljazeera.com/features/2026/5/2/who-is-nayib-bukele-el-salvadors-coolest-dictator?traffic_source=rss" target="_blank">Who Is Nayib Bukele? El Salvador’s ‘coolest dictator’</a><span class="meta">07:42 02 May</span></li>
+<li><a href="https://www.aljazeera.com/video/newsfeed/2026/5/2/chinas-un-envoy-hormuz-closure-will-dominate-trump-xi-talks?traffic_source=rss" target="_blank">China’s UN Envoy: Hormuz closure will dominate Trump-Xi talks</a><span class="meta">07:37 02 May</span></li>
+</ul></div>
+</div></div>
+<div class="category-section"><div class="category-title">Middle East</div>
+<div class="news-grid">
+<div class="source-column"><div class="source-name">Khaleej Times</div><ul>
+<li><a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxNWnhJdUppT2J5LTdCRS1OX3F4a1ExcnRMdFFrdXFBTkpGeS1yeFJEWi1PVnBUNjNrM05XREdsWHNFa04zMTRZc1RJUUJCODlWUnVFN3FqaWFtVlpHWHBHSFBCOGtVaFBBd09lc1VldHlDUE1uVXc4OURONzRXcjgyMVpKYlREMlprOWstUElQcWpyMUttWkdjRTFSNnTSAaQBQVVfeXFMT0w2VC1oRExLT2lGYUhzeWV0eF9ialFMX2xia3c1ZHIxSlB0T0ZGOThLbGhLQ0YwYW9qWGFSWG82ME9UbHZqNXA0SEk2MjZ5Q3d2OW1HUV9reUQwWUhxV2tsYnE4a3dyWDhPVTdVYVhuaEdjclhWS2UxMmMzaFhCWnBsOThCcjZXMmxBSnJkcWVJUlFTWTVhU0haRVhHbzFKSHJZOVc?oc=5" target="_blank">'Do not panic': India tests emergency alerts on smartphones - Khaleej Times</a><span class="meta">07:11 02 May</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxQTzhxdXhPODRidjlTY2NwdWVyZFdjMmpBX3hmbFF1ZmozaE8wWjJYOWU1YTlCY1k1RWVRLUlQV3cxNEVuRGFyVzNyTDQxM0M2ZVlJanJsSV9qMFg0ZTExaERhTUZwMWpqV2xBakZRZ3JGMmhwM2JfLWJXcmxRd1ZEdkxKTFh3NTlOcDZ4TG9kWnpoS183UEVIX1JyMGtSa3JkSDlSeC1UZFo3QQ?oc=5" target="_blank">India arrests 2 extradited from UAE in major bank fraud and passport scam - Khaleej Times</a><span class="meta">08:10 02 May</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxOQmxYaTBSNUk1VjNyeF9GTnVCSUN5ZVk1YkYyRUxxVHhsNElNc1FPZWtjN3B6LVRvXzdFMXhMeWp3cVUyN19DcDVSTTJvdHVHdENzcjdRam55ZDJiRHZxNlBiSXFsUXVOcm8tRkpVMU9FX3lUX3RSSUdhSW9ETzkxZVg1QkNFQ3dYdmd4TGRvUVlWbzh0U242aWxjSW5VaDhEajdhWEN2OGRyVHE2M1Bn0gG3AUFVX3lxTFBoanF1UnV2Um5WXy1sS2pVQ0lxZUhrQ0l4U2laUEsySkNuSldiUkxlUUdiMXo5S1VlN3Z3OEpqTHl1Wld1LXpUNXJ4VEpDZEppcGh2a0NGX1lPUndHcHNRYThqN3hxbkZQdmRNM1dselNzNzVKenZ0MkRWcF8zQ1pLVjUtWS1peWhpZlBiMXFVb09wYVNFcFFqekFKYVE4Ul91Mjk0b3hCU0J2OUx3a25WU1Z6SllnYw?oc=5" target="_blank">How AI is boosting cybercrime and why enterprises are not keeping pace - Khaleej Times</a><span class="meta">02:00 02 May</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxOWW4wZ01WSVRsaEQ0LXVLS3pTdzRKZmItTjdqWE5KcWcwWXROcUJDQm0zaWpJRjlwaXk1TFBGSXJCTVRSdmluNzVRUWZuXzVOQ0N6ZUxYdkZUY3VKQmlTa3hjbmdibUxLenNPQ00zR2EycjlHLXFybDl6WGE5VW5Rdk5tNjRyUm1EWDAtSzJNekdxUdIBmgFBVV95cUxQOVBUdzF5ckxyTzZMZnF2cTFGTDN0cllTUU5XeU9nM1hINFBjZW1KcnBwazdMR195YXYySEhKNUhHeVFDcFNmSHc1OHdwdUNBNXVuSXBnSERGN2JfZHR5M21WQXhvZWdDbk1EQTA3N2RTOUc1UlVDc0t3VUVzSkhBTDcyNENvMDQxOEJ0cnRTU0xjd2ZqVmRiaHhB?oc=5" target="_blank">Trump says will raise US tariffs on EU cars to 25% - Khaleej Times</a><span class="meta">03:51 02 May</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxPNHV4bW5iWUNxdzUtbXRPbEVzQUgzSnV2Y2M4T2gxTnlrZmJkWWliWE1kQjBidGVTd1I2cWxzeTVrS2k1QXdmQnVJdDl4UnRtcnpnNkpYblRLdDR4N19xdXhnSjE3T1lxX0pXZVkwUHVJMDR3VUF3UWx0ZnJqX1FsZ2VOTUhoWG9hbHdvcGRoQnZBbHQwbjRfbzAxcUUyaGxvNmtF0gGrAUFVX3lxTE5LdjNrMXFWN29zc3BKMkZxUnRjdnJTMnFVVGVzYXBhRXpFZG1kXzRiSFBONGxsd2dIc2IzV2o3dXh5YlR4LUhCSDFSbVdHMy0xNFZOZnlZeDJVTmdLc01nUmd2R2VxSW1OdWpXNGNTMDJ5RmVhc3lQdkVXRklhTjZpVU9EM3U3YklRcVppZHFvZmR0eWVxa3Fhcl9sVTBDaXg1VkQ5akw0STNNYw?oc=5" target="_blank">Spirit Airlines begins 'wind-down', cancels all flights - Khaleej Times</a><span class="meta">07:07 02 May</span></li>
+</ul></div>
+<div class="source-column"><div class="source-name">Gulf News</div><ul>
+<li><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQdXNWbDZLVmdKTDB6M3ZNZzhwcFhIeXNTVWVGVGNBbGdKa0JGOVV3c05uUTkxT3IwelBaS2dYUFhDeGNtS1cyZEIwdllBendpdDQzTUlkaTFvd2FqaUY0cG9DXzV4MFNsMldhZ1BLY3dYUW8yN3JQbkVFd0FlNVA1em5ReTN3OXZ4S3VjeGZBa1kzaUNhNHozM0hTWDZkMmpfbU82MERnOTMzYy1mTHfSAcABQVVfeXFMTkhZWFF0QmtWZHNUNUpKNE9Kd1hqV3dpQm91Ym9WOW5fVHl6RUt0MkhQZE43NmRMRllmZGJnR3lCNWhlUEpsY3o0dUx4RUdudmRQd2Y3eFJHd0dlZzVqTy1QRnNON09teEk2VkZvbGVOVTJtMEZjSTdCbGZVQkdvYnVCVzdDaFdoczBNT2R5YUllSm5YU3N2SWQ4by0tN3pUVkdMVVpuLWRzekY5dEd2T2hJSHV6T3dteHBqMlIyVU50?oc=5" target="_blank">No trade barriers: ASEAN takes firm stand to protect supply chains - Gulf News</a><span class="meta">07:38 02 May</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMi3gFBVV95cUxQNVNCTXpqdElYTC14aG1TM29iamRVWFFsMXRYa25DbkphZGlyRy1Pa1dXT3Q4VEdsbnduSjlvMGk2Nm95c3AyRUZKaExmcHFRbE1pQmJiWVFBdjdlS1RtTy0wNXRkdU1VNHE3REpPTTFMOVdXeE12NDdOUXBGVU5DdzVoM1EySURBaDVicnJNZjNrUFBHcFViME1pbG1OZjBxeEVYYVlubDRhUEJKSkFyX3EwMktnTU1PQXZrV3IzNW1PTmRGUjlOdWlzRjZqVWppV0dzUjcwNGZUNmJhV3fSAfABQVVfeXFMT2JpY0RheThWRVFJZXlGS0thRnZBdm93V1psMF9HSzVMejRnTU9VSHhUeUR5bmFNa3FFOWhIWmo2MFN4dXFUazZwQ3NOWlMxeGpFTDFsTVJ4STF2ZHFtODkyMDdKYkJkMXY2ekExWXlpQTdNNXN1Qll5RGw1LXhMbzJleDE1bU5XOWIyYVJ3a3hCdnJSMTZ0aDluUmtVMkpFcWw0bHVCYURwS3NBMVdRZWpOYnFhaFBKR1F6aEJpN2RqNU1iZHozUm9KSUp5cWR6Rk9xenFSUlI4ZHVSZzgxaVkzX3JZRHJGYU5pc3A5NldU?oc=5" target="_blank">Spirit Airlines says it’s going out of business after 34 years, is ending operations 'immediately' - Gulf News</a><span class="meta">09:47 02 May</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxOdWx5aF91RFh6Um02OHpSZnRXWFZLTzJEci1yUHRGNjZZN2F0QkFmak1BaWlMUlFOdGpOMnFxV3JYU1JOcUR1VUpnYjBNRzRBRE9pbGxXU1FHVk9pRk9fRkJfSjZxU3ZmZ3lIdnRFRkJiSndCUFpuZVhCelpMWVlBNU5SaTJxMjkzOXItZllUN2Q2UWV2VmdOdDU1ZU8xYW5pRVlneFdxM0NiVTdLWktsbEh1UdIBxgFBVV95cUxQNTZJc0pYYV9CTUpYWlYzekJ1bHZ5bU91Y3FKMks0QXhHd1A0WjBnTVI0Wlo5SXBweVVGUzM3TXlyTDI0LXJKcVVobGpKSzNNR1BYaHMwcGh3bDFia1hqcG9tam00UUtIQnJqbng3THpRVlZHZXhNU0FFSHMxeTFKNkxvOE5MbjFwNDJScl93QjI5S2hmTldrLXNCejdpS1FCTTZ3cFRncVI2RVdLZzRtSFo4eXJGU1VBR2lCNkthaTR6Rk5iRlE?oc=5" target="_blank">No pages, no books: Audible launches ‘bookless bookstore’ in New York - Gulf News</a><span class="meta">07:03 02 May</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxObGl3ZnJEWTZBNWJLbThiMlRualh5Rm5wSWJ3UlNJNGl6MGpKN3dBb3o5Rlp1TW9qR0NNb3ZYUUg3cnJTdXJfR3E4MVZjZUdvRzZ1cXM1Ti1FSkR3bm96NHlIdlNLT3F2YmpESHdSdjloX3NKY1pyM2dzbGVCb3BwMnBQNmZ0eEltclI3SmY2ZXZUd3NEMlFKNHZqOGE3WTFCb0JQS0hnQdIBugFBVV95cUxONnFSSFFzbXViY0RXV3FPbjZCTG1KRUs3WWR0SWxkbGhMV1AtX3NaNWxBU0lINFRGSm5OdlhfR3FleEZqVHNwZl9uSU1oVmJxZjM3MGJDYUx6UmlJRVFsRDJ6N0lmRzJXdTBzTHVpM2JRWm9yNUt5OWRLQ2pMOG1WMjRxLTRKZ3ZIMVlfekpVNUYzdkxLTWlvQXVUQkRoXy1sNmtVamxBQ3RaZnl4YTl6WnZtV0MyTDd1elE?oc=5" target="_blank">US court halts mail delivery of abortion pill nationwide - Gulf News</a><span class="meta">08:02 02 May</span></li>
+<li><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxOaHg1c3ZnN3MyVlV0bThlMGV6UkxlVEVEX1dEV2c5V1RRcnpTYXFlTzQ5S1NVQjBaSkcwcDUxZXVUaV9TdTdOTHpOaVUtdTNjSlY2UVhvdnZGMjVRaTY2UFBrT21WMUhNV0tDTHRYN2JYN2hLc2xSVDIxd081Wmh2Z3kyNlBLeTRmVHVfY3lFS2pZeHE2ZVh5REl3VGpkN29XTk9uaFRGXzNkWmxPN0UzSU1FT0ppeER6YWfSAcwBQVVfeXFMT2RBdkRyTzlkMGJoWENfUmd2SmluRGg2UU1jOTlBelNOMG5uYnluZTU2SmdleDhvZkh4cHp4N0EwQ2NrTm12cFFhZnpTdkpCdlF2aTBrdXlHRF9ScjBaU2ZYdjJ6c3hhTXFORjFjZXpnTzh1enhBcmtGcWltbnMwUW9INEhtcUkxUUZsOWpPazBLM3NFTVhVUE1PMXp6Tk1LSkxpV0hrUXRBM2FiQkwxSlBuNWN1R3RERzJYUzdoOFl5VFBPeXFoajV4UGY3?oc=5" target="_blank">16 US military sites in Mideast damaged during war with Iran, report claims - Gulf News</a><span class="meta">05:40 02 May</span></li>
+</ul></div>
+</div></div>
+<div class="category-section"><div class="category-title">US & Politics</div>
+<div class="news-grid">
+<div class="source-column"><div class="source-name">NBC News</div><ul>
+<li><a href="https://www.nbcnews.com/politics/white-house/trump-congressional-authorization-iran-military-operation-war-powers-rcna343094" target="_blank">Trump says he doesn't need congressional authorization for Iran war, citing ceasefire</a><span class="meta">18:28 01 May</span></li>
+<li><a href="https://www.nbcnews.com/politics/2028-election/billionaire-illinois-gov-jb-pritzker-not-fully-self-finance-2028-run-rcna343122" target="_blank">Billionaire Gov. JB Pritzker explores something new in 2028: Raising money</a><span class="meta">19:59 01 May</span></li>
+<li><a href="https://www.nbcnews.com/politics/2026-election/tom-steyer-unexpected-alliance-progressives-california-governor-race-rcna342878" target="_blank">How Tom Steyer's alliance with progressives vaulted him into the top tier of California's governor race</a><span class="meta">09:00 02 May</span></li>
+<li><a href="https://www.nbcnews.com/politics/2026-election/alabama-governor-calls-special-session-move-primaries-redistricting-ge-rcna343125" target="_blank">Alabama and Tennessee set special sessions to consider new congressional maps</a><span class="meta">19:09 01 May</span></li>
+<li><a href="https://www.nbcnews.com/nightly-news/video/trump-administration-to-pull-5-000-troops-from-germany-262564421559" target="_blank">Trump administration to pull 5,000 troops from Germany</a><span class="meta">22:44 01 May</span></li>
+</ul></div>
+<div class="source-column"><div class="source-name">NPR</div><ul>
+<li><a href="https://www.npr.org/2026/05/02/nx-s1-5800681/netflix-winnie-mandela" target="_blank">New Netflix documentary reexamines Winnie Mandela's divisive legacy</a><span class="meta">06:00 02 May</span></li>
+<li><a href="https://www.npr.org/2026/05/02/nx-s1-5781847/syria-kurds-abandoned-trump-us" target="_blank">After Assad's fall, Syria's Kurds are left in limbo, feeling abandoned by the U.S.</a><span class="meta">05:02 02 May</span></li>
+<li><a href="https://www.npr.org/2026/05/02/nx-s1-5806271/2026-midterm-elections-control-senate-race" target="_blank">2026 Senate races to watch: From most likely to flip to Democratic long shots</a><span class="meta">05:00 02 May</span></li>
+<li><a href="https://www.npr.org/2026/05/02/nx-s1-5807933/spirit-airlines-ceases-operations-folds" target="_blank">Spirit Airlines ceases operations after escalating financial struggles</a><span class="meta">02:42 02 May</span></li>
+<li><a href="https://www.npr.org/2026/05/02/g-s1-119866/trump-new-air-force-one" target="_blank">Air Force says former Qatari 747 will be ready to fly as Air Force One this summer</a><span class="meta">01:49 02 May</span></li>
+</ul></div>
+<div class="source-column"><div class="source-name">New York Times</div><ul>
+<li><a href="https://www.nytimes.com/2026/05/02/us/politics/trumps-push-for-electoral-retribution-heads-to-the-ballot-box.html" target="_blank">Trump’s Push for Electoral Retribution Heads to the Ballot Box</a><span class="meta">09:01 02 May</span></li>
+<li><a href="https://www.nytimes.com/2026/05/02/us/politics/boebert-mace-luna-republican-women.html" target="_blank">These G.O.P. Women Want Congress Members to Pay a Price for Abuse. Will It Work?</a><span class="meta">09:01 02 May</span></li>
+<li><a href="https://www.nytimes.com/2026/05/01/us/eric-swalwell-social-media.html" target="_blank">Eric Swalwell Was Proficient in Social Media. So Were His Accusers.</a><span class="meta">23:01 01 May</span></li>
+<li><a href="https://www.nytimes.com/2026/05/02/business/spirit-airlines-shutdown.html" target="_blank">Spirit Airlines, a Pioneer of Low-Fare Flights, Shuts Down</a><span class="meta">06:51 02 May</span></li>
+<li><a href="https://www.nytimes.com/2026/05/01/travel/spirit-airlines-bankruptcy-tickets-refunds.html" target="_blank">Spirit Airlines is Shutting Down. Here’s What to Do if You’re Scheduled to Fly.</a><span class="meta">07:59 02 May</span></li>
+</ul></div>
+<div class="source-column"><div class="source-name">Washington Post</div><ul>
+<li><a href="https://www.washingtonpost.com/politics/2026/05/02/trump-gas-prices-iran/" target="_blank">Trump is running out of options to contain gas price backlash</a><span class="meta">10:00 02 May</span></li>
+<li><a href="https://www.washingtonpost.com/national-security/2026/05/01/us-troops-germany-trump-merz/" target="_blank">Trump to downsize U.S. military presence in Germany</a><span class="meta">09:55 02 May</span></li>
+<li><a href="https://www.washingtonpost.com/politics/interactive/2026/black-representation-congress-vra-reconstruction/" target="_blank">How the Voting Rights Act reshaped Black representation in Congress</a><span class="meta">09:00 02 May</span></li>
+<li><a href="https://www.washingtonpost.com/politics/2026/05/02/supreme-court-cisco-torture-china/" target="_blank">Tortured in China, they want to sue Cisco. The Supreme Court may say no.</a><span class="meta">09:00 02 May</span></li>
+<li><a href="https://www.washingtonpost.com/politics/2026/05/02/spirit-airlines-flights-shutdown/" target="_blank">Spirit Airlines shuts down after White House rescue deal falls through</a><span class="meta">07:30 02 May</span></li>
+</ul></div>
+</div></div>
+<div class="category-section"><div class="category-title">Tech</div>
+<div class="news-grid">
+<div class="source-column"><div class="source-name">Hacker News</div><ul>
+<li><a href="https://www.noctua.at/en/expertise/blog/how-can-it-take-so-long-to-release-black-fan-versions" target="_blank">Why does it take so long to release black fan versions?</a><span class="meta">04:38 02 May</span></li>
+<li><a href="https://education.ti.com/en/products/calculators/graphing-calculators/ti-84-evo" target="_blank">Ti-84 Evo</a><span class="meta">20:06 01 May</span></li>
+<li><a href="https://github.com/Teaonly/SKILL.make" target="_blank">SKILL.make: Makefile Styled Skill File</a><span class="meta">08:18 02 May</span></li>
+<li><a href="https://eclecticlight.co/2026/05/02/how-fast-is-a-macos-vm-and-how-small-could-it-be/" target="_blank">How fast is a macOS VM, and how small could it be?</a><span class="meta">09:30 02 May</span></li>
+<li><a href="https://iesna.eu/?wasm=skyglow_demo" target="_blank">Show HN: Browser-based light pollution simulator using real photometric data</a><span class="meta">09:08 02 May</span></li>
+</ul></div>
+<div class="source-column"><div class="source-name">The Verge</div><ul>
+<li><a href="https://www.theverge.com/gadgets/920848/splatoon-raiders-physical-edition-preorder-switch-2-walmart-deal-sale" target="_blank">Splatoon Raiders preorders for the Switch 2 are nearly 20 percent off</a><span class="meta">18:31 01 May</span></li>
+<li><a href="https://www.theverge.com/tech/922531/microsoft-windows-11-run-menu-redesign-test" target="_blank">Microsoft tests redesigned Windows 11 Run menu with dark mode and more</a><span class="meta">18:01 01 May</span></li>
+<li><a href="https://www.theverge.com/tech/922572/apple-mac-mini-256-model" target="_blank">Apple raises the Mac Mini&#8217;s starting price</a><span class="meta">17:52 01 May</span></li>
+<li><a href="https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial" target="_blank">All the evidence revealed so far in Musk v. Altman</a><span class="meta">15:14 01 May</span></li>
+<li><a href="https://www.theverge.com/gadgets/922165/netvue-birdfy-smart-bird-feeder-bath-mothers-day-deal-sale" target="_blank">Birdfy’s smart bird feeder is down to its best-ever price for Mother’s Day</a><span class="meta">14:42 01 May</span></li>
+</ul></div>
+<div class="source-column"><div class="source-name">TechCrunch</div><ul>
+<li><a href="https://techcrunch.com/2026/05/01/uber-wants-to-turn-its-millions-of-drivers-into-a-sensor-grid-for-self-driving-companies/" target="_blank">Uber wants to turn its millions of drivers into a sensor grid for self-driving companies</a><span class="meta">06:36 02 May</span></li>
+<li><a href="https://techcrunch.com/2026/05/01/replits-amjad-masad-on-the-cursor-deal-fighting-apple-and-why-hed-rather-not-sell/" target="_blank">Replit’s Amjad Masad on the Cursor deal, fighting Apple, and why he’d rather not sell</a><span class="meta">23:06 01 May</span></li>
+<li><a href="https://techcrunch.com/2026/05/01/musely-secures-360m-from-general-catalyst-without-giving-up-equity/" target="_blank">Musely secures $360M from General Catalyst without giving up equity</a><span class="meta">22:39 01 May</span></li>
+<li><a href="https://techcrunch.com/2026/05/01/meta-buys-robotics-startup-to-bolster-its-humanoid-ai-ambitions/" target="_blank">Meta buys robotics startup to bolster its humanoid AI ambitions</a><span class="meta">22:13 01 May</span></li>
+<li><a href="https://techcrunch.com/2026/05/01/coatue-has-a-plan-to-buy-up-land-for-data-centers-possibly-for-anthropic/" target="_blank">Coatue has a plan to buy up land for data centers, possibly for Anthropic</a><span class="meta">18:23 01 May</span></li>
+</ul></div>
+<div class="source-column"><div class="source-name">Wired</div><ul>
+<li><a href="https://www.wired.com/review/ottocast-cabin-care-wireless-carplay-adapter/" target="_blank">Ottocast Cabin Care Wireless CarPlay Adapter Review: Tiny Tracker</a><span class="meta">10:08 02 May</span></li>
+<li><a href="https://www.wired.com/story/professional-bike-fitting-benefits/" target="_blank">A Professional Bike Fitting Will Make You Want to Ride Even More</a><span class="meta">10:00 02 May</span></li>
+<li><a href="https://www.wired.com/story/how-to-buy-a-bike-thats-the-right-size-for-you/" target="_blank">How to Buy a Bike That’s the Right Size for You</a><span class="meta">10:00 02 May</span></li>
+<li><a href="https://www.wired.com/story/best-gifts-for-bird-lovers/" target="_blank">An Editor’s Picks: The Best Gifts for Bird Lovers</a><span class="meta">09:30 02 May</span></li>
+<li><a href="https://www.wired.com/gallery/best-mothers-day-gifts-2026/" target="_blank">The Mother's Day Gifts Our Editors Love (2026)</a><span class="meta">09:10 02 May</span></li>
+</ul></div>
+</div></div>
+<div class="footer"><p>Automated News & Market Aggregator</p></div>
+</div></body></html>
