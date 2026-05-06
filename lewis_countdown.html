@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lewis Arrival Countdown</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            padding: 20px;
+        }
+        #message {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        #countdown {
+            font-size: 80px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+        /* Responsive font sizes */
+        @media (max-width: 768px) {
+            #message {
+                font-size: 5vw;
+            }
+            #countdown {
+                font-size: 10vw;
+            }
+        }
+        @media (max-width: 480px) {
+            #message {
+                font-size: 6vw;
+            }
+            #countdown {
+                font-size: 12vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p id="message"></p>
+        <h1 id="countdown"></h1>
+    </div>
+    <script>
+        function updateCountdown() {
+            const arrivalDate = new Date('2026-05-22T06:35:00');
+            const now = new Date();
+            const timeRemaining = arrivalDate - now;
+
+            const messageLabel = document.getElementById('message');
+            const countdownLabel = document.getElementById('countdown');
+
+            if (timeRemaining > 0) {
+                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+                const pad = (num) => num.toString().padStart(2, '0');
+
+                countdownLabel.textContent = `${days}d ${pad(hours)}h ${pad(minutes)}m ${pad(seconds)}s`;
+                messageLabel.textContent = "Time until Lewis arrives on flight EK32:";
+            } else {
+                countdownLabel.textContent = "Lewis has arrived!";
+                messageLabel.textContent = "";
+                clearInterval(intervalId); // Stop the timer
+            }
+        }
+
+        // Initial call and update every second
+        const intervalId = setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
