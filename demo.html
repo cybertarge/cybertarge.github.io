@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FeedbackLoop: AI Assessment & Faculty Oversight Sandbox</title>
+  <!-- Google Fonts: Outfit for headings, Inter for body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background decorative glowing gradients -->
+  <div class="glow-bg glow-1"></div>
+  <div class="glow-bg glow-2"></div>
+
+  <header class="app-header">
+    <div class="logo-area">
+      <span class="logo-icon">🔁</span>
+      <div>
+        <h1>FeedbackLoop</h1>
+        <p class="subtitle">AI Assessment &amp; Faculty Oversight Sandbox</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <span class="badge badge-live">Presentation Mode</span>
+      <button id="toggle-guide-btn" class="btn btn-secondary">
+        <span class="btn-icon">💡</span> Presenter Guide
+      </button>
+      <button id="open-explainer-btn" class="btn btn-primary">
+        <span class="btn-icon">🎓</span> Model Collapse Explainer
+      </button>
+    </div>
+  </header>
+
+  <main class="dashboard-grid">
+
+    <!-- Column 1: Student Submission -->
+    <section class="panel panel-submission">
+      <div class="panel-header">
+        <h2>1. Student Submission</h2>
+        <span class="step-num">Step 1</span>
+      </div>
+      
+      <div class="scenario-selector">
+        <label class="section-label">Select Sample Submission:</label>
+        <div class="tabs">
+          <button class="tab-btn active" data-scenario="human">
+            <span class="tab-icon">🧑‍🎓</span> Human Original
+          </button>
+          <button class="tab-btn" data-scenario="ai">
+            <span class="tab-icon">🤖</span> Pure GenAI
+          </button>
+          <button class="tab-btn" data-scenario="hybrid">
+            <span class="tab-icon">🤝</span> Hybrid/Assisted
+          </button>
+        </div>
+      </div>
+
+      <div class="input-area">
+        <div class="textarea-header">
+          <span id="student-meta" class="meta-info">Author: Sarah Jenkins (History 201)</span>
+          <span class="char-count" id="char-count">0 chars</span>
+        </div>
+        <textarea id="submission-text" placeholder="Paste student submission here..." spellcheck="false"></textarea>
+      </div>
+
+      <button id="run-assessment-btn" class="btn btn-assess">
+        <span class="btn-icon">⚡</span> Run AI Assessment
+      </button>
+    </section>
+
+    <!-- Column 2: AI Grading Engine -->
+    <section class="panel panel-engine">
+      <div class="panel-header">
+        <h2>2. AI Assessment Engine</h2>
+        <span class="step-num">Step 2</span>
+      </div>
+
+      <!-- Scanning overlay simulation -->
+      <div id="scan-overlay" class="scan-overlay hidden">
+        <div class="scanner-line"></div>
+        <div class="scanner-text">Analyzing essay syntax and depth...</div>
+      </div>
+
+      <!-- AI-on-AI loop safety monitor -->
+      <div id="safety-monitor" class="safety-card safety-pass">
+        <div class="safety-header">
+          <span class="safety-status-icon">🛡️</span>
+          <h3>AI-on-AI Integrity Check</h3>
+        </div>
+        <div class="safety-body">
+          <div class="gauge-container">
+            <div class="gauge-bar" id="safety-gauge" style="width: 12%;"></div>
+          </div>
+          <p id="safety-status-desc">GenAI Authorship Probability: <strong>12% (Low Risk)</strong></p>
+        </div>
+        <div id="safety-warning-banner" class="warning-banner hidden">
+          <strong>⚠️ AI-on-AI Grading Risk &amp; Overmarking Alert!</strong>
+          <p>This essay displays high statistical uniformity characteristic of LLM outputs. GenAI models tend to <strong>overmark submissions</strong> due to a pro-human / sycophancy bias (RLHF alignment makes the AI highly agreeable and prone to grading inflation, especially when grading AI-generated text). To prevent this and avoid <strong>Model Collapse (Habsburg AI)</strong>, auto-approval has been locked. Manual review required.</p>
+        </div>
+      </div>
+
+      <!-- AI Rubrics output -->
+      <div class="rubric-results">
+        <h3 class="section-title">Draft Rubric Analysis</h3>
+        
+        <div class="rubric-item">
+          <div class="rubric-meta">
+            <span class="rubric-name">Critical Thinking &amp; Originality</span>
+            <span class="rubric-score" id="ai-score-critical">--</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-bar" id="ai-bar-critical" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <div class="rubric-item">
+          <div class="rubric-meta">
+            <span class="rubric-name">Structure &amp; Argumentation</span>
+            <span class="rubric-score" id="ai-score-structure">--</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-bar" id="ai-bar-structure" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <div class="rubric-item">
+          <div class="rubric-meta">
+            <span class="rubric-name">Subject Knowledge</span>
+            <span class="rubric-score" id="ai-score-knowledge">--</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-bar" id="ai-bar-knowledge" style="width: 0%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Draft feedback -->
+      <div class="feedback-draft">
+        <h3 class="section-title">Draft AI Feedback (Formative)</h3>
+        <div id="ai-feedback-box" class="ai-feedback-placeholder">
+          Click "Run AI Assessment" to generate draft scores and feedback.
+        </div>
+      </div>
+    </section>
+
+    <!-- Column 3: Faculty Oversight Terminal -->
+    <section class="panel panel-oversight">
+      <div class="panel-header">
+        <h2>3. Faculty Oversight (HITL)</h2>
+        <span class="step-num">Step 3</span>
+      </div>
+
+      <div class="override-controls">
+        <h3 class="section-title">Professor Rubric Adjustments</h3>
+        
+        <div class="override-item">
+          <div class="override-meta">
+            <span class="override-name">Critical Thinking</span>
+            <span class="override-val" id="faculty-val-critical">--</span>
+          </div>
+          <input type="range" id="slider-critical" min="0" max="100" value="70" disabled>
+        </div>
+
+        <div class="override-item">
+          <div class="override-meta">
+            <span class="override-name">Structure &amp; Argument</span>
+            <span class="override-val" id="faculty-val-structure">--</span>
+          </div>
+          <input type="range" id="slider-structure" min="0" max="100" value="70" disabled>
+        </div>
+
+        <div class="override-item">
+          <div class="override-meta">
+            <span class="override-name">Subject Knowledge</span>
+            <span class="override-val" id="faculty-val-knowledge">--</span>
+          </div>
+          <input type="range" id="slider-knowledge" min="0" max="100" value="70" disabled>
+        </div>
+      </div>
+
+      <div class="final-feedback-area">
+        <h3 class="section-title">Faculty-Refined Feedback</h3>
+        <p class="helper-text">You can edit the draft feedback below to insert personalized guidance.</p>
+        <textarea id="faculty-feedback-box" placeholder="Review the AI draft, then refine the feedback here..." disabled></textarea>
+      </div>
+
+      <div class="publish-action">
+        <button id="approve-grade-btn" class="btn btn-approve" disabled>
+          <span class="btn-icon">✔️</span> Approve &amp; Release Feedback
+        </button>
+        <p id="system-status-msg" class="system-status"></p>
+      </div>
+
+      <div class="gradebook-log">
+        <h3 class="section-title">Assessment Activity Log</h3>
+        <ul id="log-list" class="log-list">
+          <li class="empty-log">No assessments signed off in this session.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Model Collapse Explainer Dialog -->
+  <dialog id="explainer-dialog" closedby="any" aria-labelledby="explainer-title">
+    <div class="dialog-content">
+      <header class="dialog-header">
+        <h2 id="explainer-title">Habsburg AI &amp; Model Collapse</h2>
+        <button id="close-explainer-btn" class="dialog-close">&times;</button>
+      </header>
+      <div class="dialog-body">
+        <div class="alert alert-warning">
+          <strong>Why AI grading AI is a hazard:</strong> Inbreeding datasets on LLM outputs degrades subsequent models. If AI grades work generated by AI, feedback becomes a self-reinforcing, homogenous echo chamber.
+        </div>
+        
+        <h3>The Recursive Degradation Cycle</h3>
+        <div class="diagram">
+          <div class="diagram-step">
+            <div class="diagram-icon">🤖</div>
+            <h4>GenAI Essay</h4>
+            <p>Student prompts AI to write assignment using generic patterns.</p>
+          </div>
+          <div class="diagram-arrow">➔</div>
+          <div class="diagram-step">
+            <div class="diagram-icon">🖥️</div>
+            <h4>AI Assessment</h4>
+            <p>AI grader scores essay, matching standard patterns (inflated score).</p>
+          </div>
+          <div class="diagram-arrow">➔</div>
+          <div class="diagram-step">
+            <div class="diagram-icon">📉</div>
+            <h4>Model Training</h4>
+            <p>Output loop trains future models on mediocre, AI-on-AI data.</p>
+          </div>
+          <div class="diagram-arrow">➔</div>
+          <div class="diagram-step collapse-step">
+            <div class="diagram-icon">💥</div>
+            <h4>Model Collapse</h4>
+            <p>Degraded diversity, loss of extreme capabilities, high hallucinations.</p>
+          </div>
+        </div>
+
+        <div class="benefit-grid">
+          <div class="benefit-box">
+            <h4>The Solution: Human-in-the-Loop</h4>
+            <p>Human professors introduce nuance, identify AI style hallmarks, and break the recursive loop, preserving the high standards of academic assessment.</p>
+          </div>
+          <div class="benefit-box">
+            <h4>The Promise: Consistency + Compassion</h4>
+            <p>Use AI to draft structure and identify typos (saving 70% grading time), and dedicate that saved time to direct student counseling and custom, high-impact edits.</p>
+          </div>
+          <div class="benefit-box">
+            <h4>The Overmarking Bias</h4>
+            <p>LLMs are trained via RLHF to be highly agreeable (sycophancy). This causes them to systematically overmark student work, inflating grades for neatly formatted but shallow essays.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Presenter Guide Slide-out Drawer -->
+  <aside id="presenter-guide" class="guide-drawer">
+    <header class="guide-header">
+      <h3>Presentation Walkthrough Guide</h3>
+      <button id="close-guide-btn" class="drawer-close">&times;</button>
+    </header>
+    <div class="guide-content">
+      <div class="guide-section">
+        <h4>1. Hook the Audience (Slides 1-2)</h4>
+        <p><strong>Topic:</strong> The Promise of AI Grading.</p>
+        <p>Show how AI-assisted grading achieves <strong>85-92% agreement</strong> with professors and saves up to <strong>70% of grading time</strong>.</p>
+      </div>
+
+      <div class="guide-section">
+        <h4>2. Live Demo: Scenario A (Authentic Human)</h4>
+        <ul>
+          <li>Click the <strong>Human Original</strong> tab.</li>
+          <li>Click <strong>Run AI Assessment</strong>.</li>
+          <li>Point out the low AI Probability (12%).</li>
+          <li>Show the rubric scores and detailed feedback.</li>
+          <li>Show how you, as the faculty member, can adjust the sliders (e.g., increase Critical Thinking) and edit the feedback box.</li>
+          <li>Click <strong>Approve &amp; Release Feedback</strong> to show the submission log.</li>
+        </ul>
+      </div>
+
+      <div class="guide-section">
+        <h4>3. Live Demo: Scenario B (The Danger - AI-on-AI)</h4>
+        <ul>
+          <li>Click the <strong>Pure GenAI</strong> tab.</li>
+          <li>Click <strong>Run AI Assessment</strong>.</li>
+          <li><strong>Alert!</strong> The AI detector shows <strong>98% AI Probability</strong>.</li>
+          <li><strong>Overmarking Bias:</strong> Note how the AI overmarked this submission (giving it an average of 75/100) due to pro-human/sycophancy bias. It heavily rewarded surface-level formatting (96/100) despite a complete lack of critical analysis (48/100).</li>
+          <li>Explain the warning: "AI-on-AI Grading Risk." Explain how grading this with AI without human review contributes to <strong>Model Collapse (Habsburg AI)</strong>.</li>
+          <li>Note that "Approve &amp; Release Feedback" is locked until you override and edit. This forces faculty involvement.</li>
+        </ul>
+      </div>
+
+      <div class="guide-section text-highlight">
+        <h4>4. The "Habsburg AI" Explainer</h4>
+        <p>Open the <strong>Model Collapse Explainer</strong> modal to display the visual diagram explaining why unchecked AI-on-AI loops destroy evaluation diversity.</p>
+      </div>
+
+      <div class="guide-section">
+        <h4>5. Final Takeaway</h4>
+        <p>Emphasize that AI is a co-pilot, not an autopilot. We automate the draft feedback to gain consistency, but we retain the human professor's oversight to protect pedagogy.</p>
+      </div>
+    </div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
