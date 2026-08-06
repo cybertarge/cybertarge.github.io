@@ -256,6 +256,8 @@ function speak(num) {
   if (selectVoice.value !== '') {
     const voiceIdx = parseInt(selectVoice.value, 10);
     utterance.voice = voices[voiceIdx];
+  } else {
+    utterance.lang = 'en-US'; // Force system to use a default English voice
   }
   
   utterance.rate = voiceRate;
