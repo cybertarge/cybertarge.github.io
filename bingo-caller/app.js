@@ -225,15 +225,13 @@ function loadVoices() {
   const defaultOpt = document.createElement('option');
   defaultOpt.value = '';
   defaultOpt.textContent = 'System Default Voice';
+  defaultOpt.selected = true;
   selectVoice.appendChild(defaultOpt);
 
   voices.forEach((voice, index) => {
     const option = document.createElement('option');
     option.value = index;
     option.textContent = `${voice.name} (${voice.lang})`;
-    if (voice.default) {
-      option.selected = true;
-    }
     selectVoice.appendChild(option);
   });
 }
