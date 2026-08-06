@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A premium, modern, glassmorphic numbers caller for Bingo, Tombola, and Housie. Choose numbers from 1 to 99 with custom font scaling, auto-drawing, and voice callers.">
+  <title>Zareena's GlowCall - Premium Bingo & Tombola Caller</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <!-- Decorative background elements -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-glow bg-glow-3"></div>
+
+  <div class="app-container">
+    <header class="app-header">
+      <div class="logo-area">
+        <h1>GlowCall</h1>
+        <p class="tagline">Elegant Bingo, Tombola & Housie Number Caller</p>
+      </div>
+      <div class="stats-panel">
+        <div class="stat-box" id="stat-called-box">
+          <span class="stat-label">Called</span>
+          <span class="stat-value" id="stats-called">0</span>
+        </div>
+        <div class="stat-box" id="stat-remaining-box">
+          <span class="stat-label">Remaining</span>
+          <span class="stat-value" id="stats-remaining">99</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <!-- Main Caller View (Left Panel) -->
+      <section class="panel caller-panel">
+        <div class="panel-header">
+          <h2>Current Number</h2>
+          <span class="status-indicator" id="status-text">Ready to Play</span>
+        </div>
+        
+        <!-- Big Number Display -->
+        <div class="number-display-container">
+          <div class="ripple-wave" id="ripple"></div>
+          <div class="number-display" id="main-number" aria-live="polite">--</div>
+        </div>
+
+        <!-- Controls for drawing -->
+        <div class="action-buttons">
+          <button id="btn-draw" class="btn btn-primary" title="Draw next number">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="btn-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+            Draw Number
+          </button>
+          
+          <button id="btn-auto" class="btn btn-secondary" title="Toggle automatic calling">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="btn-icon play-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="btn-icon pause-icon hidden">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />
+            </svg>
+            <span id="auto-btn-label">Auto Draw</span>
+          </button>
+
+          <button id="btn-reset-trigger" class="btn btn-danger" title="Reset the board and clear history">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="btn-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+            </svg>
+            Reset
+          </button>
+        </div>
+
+        <!-- Customizations (Sliders & Options) -->
+        <div class="customization-group">
+          <!-- Font Size Adjuster -->
+          <div class="slider-control">
+            <div class="slider-header">
+              <label for="slider-font">Font Size</label>
+              <span id="font-size-val" class="mono">10rem</span>
+            </div>
+            <input type="range" id="slider-font" min="4" max="18" step="0.5" value="10" aria-valuemin="4" aria-valuemax="18" aria-valuenow="10">
+          </div>
+
+          <!-- Auto Interval Adjuster -->
+          <div class="slider-control">
+            <div class="slider-header">
+              <label for="slider-interval">Draw Interval</label>
+              <span id="interval-val" class="mono">4.0s</span>
+            </div>
+            <input type="range" id="slider-interval" min="1" max="15" step="0.5" value="4" aria-valuemin="1" aria-valuemax="15" aria-valuenow="4">
+          </div>
+        </div>
+
+        <!-- Voice Call Panel -->
+        <div class="voice-panel">
+          <div class="voice-row">
+            <button id="btn-mute" class="btn-icon-only" aria-label="Toggle voice synthesis" title="Mute/Unmute voice calls">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="speaker-icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="speaker-muted-icon hidden">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 9.75L19.5 12m0 0l2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-10.5-6L4.03 5.67a.75.75 0 011.06-1.06l14.25 14.25a.75.75 0 11-1.06 1.06L13.5 15.187m-2.22 2.22L6.75 12.75H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75v1.875M12.75 5.37v3.318M15 9.375a5.25 5.25 0 01.463 6.068" />
+              </svg>
+            </button>
+            <div class="voice-selector-wrapper">
+              <label for="select-voice" class="sr-only">Choose Caller Voice</label>
+              <select id="select-voice" class="select-voice" aria-label="Select caller voice">
+                <option value="">(Loading system voices...)</option>
+              </select>
+            </div>
+          </div>
+          <div class="slider-control compact">
+            <div class="slider-header small">
+              <label for="slider-rate">Voice Speed</label>
+              <span id="rate-val" class="mono">1.0x</span>
+            </div>
+            <input type="range" id="slider-rate" min="0.5" max="2" step="0.1" value="1" aria-valuemin="0.5" aria-valuemax="2" aria-valuenow="1">
+          </div>
+        </div>
+      </section>
+
+      <!-- Grid and History View (Right Panel) -->
+      <section class="panel board-panel">
+        <!-- History Bar -->
+        <div class="history-container">
+          <h3>Recent Draws</h3>
+          <div class="history-list" id="history-list">
+            <span class="empty-history">No numbers drawn yet</span>
+          </div>
+        </div>
+
+        <hr class="panel-divider">
+
+        <!-- 1-99 Grid -->
+        <div class="board-header">
+          <h2>Numbers Board (1 - 99)</h2>
+        </div>
+        <div class="board-grid" id="board-grid" role="grid" aria-label="Bingo Board">
+          <!-- Generated by JS -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Reset Confirmation Dialog -->
+  <dialog id="dialog-confirm" class="confirm-dialog" closedby="any">
+    <div class="dialog-content">
+      <div class="dialog-icon-wrapper">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="dialog-icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+      </div>
+      <h3>Reset Game?</h3>
+      <p>This will clear the current progress, called numbers, and history. You cannot undo this action.</p>
+      <div class="dialog-buttons">
+        <button id="btn-confirm-cancel" class="btn btn-outline">Cancel</button>
+        <button id="btn-confirm-reset" class="btn btn-danger-solid">Yes, Reset Game</button>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
